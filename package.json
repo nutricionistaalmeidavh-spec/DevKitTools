@@ -10,6 +10,7 @@
     "preparar:kits": "node scripts/preparar-kits.mjs",
     "validar": "node scripts/validar-catalogo.mjs",
     "matriz": "node scripts/gerar-matriz.mjs",
+    "snapshot:atualizar": "node scripts/atualizar-snapshot.mjs",
     "montar:kit": "node scripts/montar-kit.mjs",
     "montar:todos": "node scripts/montar-todos.mjs",
     "montar:pacotes": "node scripts/montar-pacotes.mjs",

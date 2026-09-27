@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import path from 'node:path';
-import {lerSemente, criarCatalogo, validarCatalogo, gerarMatrizMarkdown, criarPacotes} from '../scripts/lib/catalogo.mjs';
+import {lerSemente, criarCatalogo, validarCatalogo, gerarMatrizMarkdown, criarPacotes, selecionarKitsParaMontagem} from '../scripts/lib/catalogo.mjs';
 
 const semente = await lerSemente(path.join(process.cwd(),'catalogo','semente-modulos.tsv'));
 
@@ -33,6 +33,15 @@ test('kit pronto exige preço, documentação e licenças conferidas', () => {
   assert.ok(r.erros.some(e=>e.includes('sem preço')));
   assert.ok(r.erros.some(e=>e.includes('documentação')));
   assert.ok(r.erros.some(e=>e.includes('licenças')));
+});
+
+test('montagem comercial padrão inclui somente kits prontos', () => {
+  const catalogo = criarCatalogo(semente);
+  catalogo.kits[0] = {...catalogo.kits[0], estadoComercial:'pronto', precoSugeridoBRL:49, documentacaoConferida:true, licencasConferidas:true};
+  catalogo.kits[1] = {...catalogo.kits[1], estadoComercial:'qa'};
+  const selecionados = selecionarKitsParaMontagem(catalogo);
+  assert.deepEqual(selecionados.map(k=>k.idTecnico), [catalogo.kits[0].idTecnico]);
+  assert.equal(selecionarKitsParaMontagem(catalogo,{incluirNaoProntos:true}).length, catalogo.kits.length);
 });
 
 test('matriz é determinística e contém colunas comerciais', () => {

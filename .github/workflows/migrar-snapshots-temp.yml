@@ -1,0 +1,74 @@
+name: Migrar snapshots temporariamente
+
+on:
+  push:
+    branches: [feat/kits-autocontidos]
+    paths:
+      - '.github/workflows/migrar-snapshots-temp.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrar:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout DevKitTools na branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/kits-autocontidos
+          fetch-depth: 0
+
+      - name: Confirmar credencial temporária da origem
+        shell: bash
+        env:
+          TOKEN_ORIGEM: ${{ secrets.UTILIDADES_REPO_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$TOKEN_ORIGEM" ]; then
+            echo 'Migração bloqueada: configure temporariamente UTILIDADES_REPO_TOKEN com acesso somente leitura ao utilidades.' >&2
+            exit 42
+          fi
+
+      - name: Checkout temporário do utilidades
+        uses: actions/checkout@v4
+        with:
+          repository: nutricionistaalmeidavh-spec/utilidades
+          token: ${{ secrets.UTILIDADES_REPO_TOKEN }}
+          path: _origem/utilidades
+          fetch-depth: 1
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Importar os snapshots dos kits habilitados
+        run: npm run snapshot:atualizar -- --todos --origem _origem/utilidades
+
+      - name: Regenerar matriz e validar a migração
+        run: |
+          npm run matriz
+          npm test
+          npm run validar
+          npm run validar:snapshots
+          npm run verificar:secrets
+
+      - name: Registrar snapshots na branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add catalogo/kits.json catalogo/MATRIZ-KITS.md kits
+          if git diff --cached --quiet; then
+            echo 'Nenhuma alteração de snapshot para registrar.'
+            exit 0
+          fi
+          git commit -m 'feat: incorpora snapshots tecnicos dos 63 kits'
+          git push origin HEAD:feat/kits-autocontidos

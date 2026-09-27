@@ -1,11 +1,15 @@
-param([Parameter(Mandatory=$true)][string]$OrigemUtilidades,[string]$Dist='dist')
+param([string]$Dist='dist',[switch]$Todos)
 $ErrorActionPreference='Stop'
 if (-not (Get-Command node -ErrorAction SilentlyContinue)) { throw 'Node.js 22+ não encontrado.' }
 npm ci
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 npm test
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-node scripts/montar-todos.mjs --origem $OrigemUtilidades --dist $Dist
+$ArgsMontagem=@('scripts/montar-todos.mjs','--dist',$Dist)
+if ($Todos) { $ArgsMontagem += '--todos' }
+node @ArgsMontagem
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-node scripts/montar-pacotes.mjs
+$ArgsPacotes=@('scripts/montar-pacotes.mjs')
+if ($Todos) { $ArgsPacotes += '--todos' }
+node @ArgsPacotes
 exit $LASTEXITCODE

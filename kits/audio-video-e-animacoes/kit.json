@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-DOC-002",
+  "idTecnico": "artisys-media",
+  "slug": "audio-video-e-animacoes",
+  "nome": "Áudio, Vídeo e Animações",
+  "descricao": "Fornece operações reutilizáveis para mídia, áudio, vídeo e manifestos de animação.",
+  "categoria": "Documentos e Mídia",
+  "versao": "1.0.0",
+  "estadoTecnico": "stable",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-media",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "audio-video-e-animacoes-v1.0.0.zip"
+}

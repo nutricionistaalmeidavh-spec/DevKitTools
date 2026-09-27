@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-WEB-002",
+  "idTecnico": "artisys-pwa-runtime",
+  "slug": "aplicativo-web-instalavel-e-offline",
+  "nome": "Aplicativo Web Instalável e Offline",
+  "descricao": "Fornece cache, instalação, funcionamento offline e atualização controlada para PWAs.",
+  "categoria": "Aplicativos Web e Mobile",
+  "versao": "0.1.0",
+  "estadoTecnico": "implemented",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-pwa-runtime",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "aplicativo-web-instalavel-e-offline-v0.1.0.zip"
+}

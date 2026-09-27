@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-GEST-002",
+  "idTecnico": "artisys-assets",
+  "slug": "cadastro-de-ativos",
+  "nome": "Cadastro de Ativos",
+  "descricao": "Cadastra ativos genéricos com situação, localização, responsável, tags e metadados.",
+  "categoria": "Gestão e Operação",
+  "versao": "0.1.0",
+  "estadoTecnico": "implemented",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-assets",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "cadastro-de-ativos-v0.1.0.zip"
+}

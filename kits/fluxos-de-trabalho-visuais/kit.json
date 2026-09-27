@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-UI-002",
+  "idTecnico": "artisys-workflows",
+  "slug": "fluxos-de-trabalho-visuais",
+  "nome": "Fluxos de Trabalho Visuais",
+  "descricao": "Modela fluxos, dependências e processos com editores visuais.",
+  "categoria": "Interface e Produtividade",
+  "versao": "1.0.0",
+  "estadoTecnico": "stable",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-workflows",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "fluxos-de-trabalho-visuais-v1.0.0.zip"
+}

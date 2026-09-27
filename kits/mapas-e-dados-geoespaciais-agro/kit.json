@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-AGRO-002",
+  "idTecnico": "artisys-agro-maps",
+  "slug": "mapas-e-dados-geoespaciais-agro",
+  "nome": "Mapas e Dados Geoespaciais Agro",
+  "descricao": "Valida, normaliza e prepara geometrias e mapas offline para produtos agrícolas e pecuários.",
+  "categoria": "Engenharia e Agro",
+  "versao": "0.1.0",
+  "estadoTecnico": "implemented",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-agro-maps",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "mapas-e-dados-geoespaciais-agro-v0.1.0.zip"
+}

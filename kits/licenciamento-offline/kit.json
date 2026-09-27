@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-PLAT-013",
+  "idTecnico": "artisys-licensing",
+  "slug": "licenciamento-offline",
+  "nome": "Licenciamento Offline",
+  "descricao": "Gerencia licenças locais, expiração, vínculo ao dispositivo e liberação de funcionalidades.",
+  "categoria": "Plataforma e Dados",
+  "versao": "0.1.0",
+  "estadoTecnico": "implemented",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-licensing",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "licenciamento-offline-v0.1.0.zip"
+}

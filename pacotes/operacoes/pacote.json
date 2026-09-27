@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "sku": "PKT-005",
+  "slug": "operacoes",
+  "nome": "Operações",
+  "versao": "1.0.0",
+  "kits": [
+    "ordens-de-servico",
+    "motor-de-fluxos-de-trabalho",
+    "aprovacoes",
+    "checklists-e-inspecoes",
+    "contatos-e-organizacoes"
+  ],
+  "estadoComercial": "preparando",
+  "precoSugeridoBRL": null,
+  "zip": "operacoes-v1.0.0.zip"
+}

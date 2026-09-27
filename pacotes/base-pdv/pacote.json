@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "sku": "PKT-003",
+  "slug": "base-pdv",
+  "nome": "Base PDV",
+  "versao": "1.0.0",
+  "kits": [
+    "estoque-e-movimentacoes",
+    "catalogo-de-produtos-e-servicos",
+    "precos-descontos-e-combos",
+    "impressao-cupons-e-etiquetas",
+    "integracao-com-dispositivos-seriais"
+  ],
+  "estadoComercial": "preparando",
+  "precoSugeridoBRL": null,
+  "zip": "base-pdv-v1.0.0.zip"
+}

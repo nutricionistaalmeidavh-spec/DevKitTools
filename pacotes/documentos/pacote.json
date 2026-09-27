@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "sku": "PKT-004",
+  "slug": "documentos",
+  "nome": "Documentos",
+  "versao": "1.0.0",
+  "kits": [
+    "geracao-e-leitura-de-pdfs",
+    "reconhecimento-de-texto-ocr",
+    "leitura-e-processamento-de-documentos",
+    "documentos-e-planilhas-office",
+    "conversao-de-documentos",
+    "anotacoes-em-imagens-e-pdfs"
+  ],
+  "estadoComercial": "preparando",
+  "precoSugeridoBRL": null,
+  "zip": "documentos-v1.0.0.zip"
+}

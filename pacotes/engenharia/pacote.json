@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "sku": "PKT-008",
+  "slug": "engenharia",
+  "nome": "Engenharia",
+  "versao": "1.0.0",
+  "kits": [
+    "leitura-e-processamento-bim-ifc",
+    "geracao-e-leitura-de-pdfs",
+    "anotacoes-em-imagens-e-pdfs",
+    "relatorios-e-indicadores"
+  ],
+  "estadoComercial": "preparando",
+  "precoSugeridoBRL": null,
+  "zip": "engenharia-v1.0.0.zip"
+}

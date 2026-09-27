@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-DOC-004",
+  "idTecnico": "artisys-office",
+  "slug": "documentos-e-planilhas-office",
+  "nome": "Documentos e Planilhas Office",
+  "descricao": "Manipula documentos, planilhas e apresentações em formatos de escritório.",
+  "categoria": "Documentos e Mídia",
+  "versao": "1.0.0",
+  "estadoTecnico": "stable",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-office",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "documentos-e-planilhas-office-v1.0.0.zip"
+}

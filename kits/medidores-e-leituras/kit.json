@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-GEST-010",
+  "idTecnico": "artisys-metering",
+  "slug": "medidores-e-leituras",
+  "nome": "Medidores e Leituras",
+  "descricao": "Registra horímetro, odômetro, ciclos e outros medidores com deltas e validação.",
+  "categoria": "Gestão e Operação",
+  "versao": "0.1.0",
+  "estadoTecnico": "implemented",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-metering",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "medidores-e-leituras-v0.1.0.zip"
+}

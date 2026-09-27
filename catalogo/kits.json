@@ -1,0 +1,2464 @@
+{
+  "schemaVersion": 1,
+  "locale": "pt-BR",
+  "modoDistribuicao": "publico-desenvolvimento",
+  "kits": [
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-WEB-001",
+      "idTecnico": "artisys-whatsapp-launcher",
+      "slug": "abertura-de-conversas-no-whatsapp",
+      "nome": "Abertura de Conversas no WhatsApp",
+      "descricao": "Abre WhatsApp ou WhatsApp Web com número e mensagem pré-preenchidos, sem envio automático obrigatório.",
+      "categoria": "Aplicativos Web e Mobile",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-whatsapp-launcher",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "abertura-de-conversas-no-whatsapp-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-WEB-002",
+      "idTecnico": "artisys-pwa-runtime",
+      "slug": "aplicativo-web-instalavel-e-offline",
+      "nome": "Aplicativo Web Instalável e Offline",
+      "descricao": "Fornece cache, instalação, funcionamento offline e atualização controlada para PWAs.",
+      "categoria": "Aplicativos Web e Mobile",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-pwa-runtime",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "aplicativo-web-instalavel-e-offline-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-WEB-003",
+      "idTecnico": "artisys-webview-bridge",
+      "slug": "integracao-web-aplicativo",
+      "nome": "Integração Web ↔ Aplicativo",
+      "descricao": "Padroniza a comunicação segura entre uma interface WebView e o aplicativo nativo.",
+      "categoria": "Aplicativos Web e Mobile",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-webview-bridge",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "integracao-web-aplicativo-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-ARQ-001",
+      "idTecnico": "artisys-capture",
+      "slug": "captura-por-camera-e-codigos",
+      "nome": "Captura por Câmera e Códigos",
+      "descricao": "Captura câmera ou arquivo e lê QR codes, códigos de barras e imagens.",
+      "categoria": "Arquivos e Captura",
+      "versao": "1.0.0",
+      "estadoTecnico": "stable",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-capture",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "captura-por-camera-e-codigos-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-ARQ-002",
+      "idTecnico": "artisys-upload",
+      "slug": "envio-e-validacao-de-arquivos",
+      "nome": "Envio e Validação de Arquivos",
+      "descricao": "Controla upload, políticas, validações, filas e seleção de arquivos.",
+      "categoria": "Arquivos e Captura",
+      "versao": "1.0.0",
+      "estadoTecnico": "stable",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-upload",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "envio-e-validacao-de-arquivos-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-ARQ-003",
+      "idTecnico": "artisys-files",
+      "slug": "organizacao-e-exploracao-de-arquivos",
+      "nome": "Organização e Exploração de Arquivos",
+      "descricao": "Cria workspaces espelhados em pastas locais com árvore, drag-and-drop, busca e acompanhamento de alterações.",
+      "categoria": "Arquivos e Captura",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-files",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "organizacao-e-exploracao-de-arquivos-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DESK-001",
+      "idTecnico": "artisys-desktop-shell",
+      "slug": "estrutura-base-para-aplicativos-desktop",
+      "nome": "Estrutura Base para Aplicativos Desktop",
+      "descricao": "Padroniza estrutura desktop, deep links, configurações, logs e hooks de atualização.",
+      "categoria": "Desktop e Hardware",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-desktop-shell",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "estrutura-base-para-aplicativos-desktop-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DESK-002",
+      "idTecnico": "artisys-printing",
+      "slug": "impressao-cupons-e-etiquetas",
+      "nome": "Impressão, Cupons e Etiquetas",
+      "descricao": "Gera e imprime recibos, cupons, etiquetas e saídas para impressoras térmicas.",
+      "categoria": "Desktop e Hardware",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-printing",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "impressao-cupons-e-etiquetas-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DESK-003",
+      "idTecnico": "artisys-serialport",
+      "slug": "integracao-com-dispositivos-seriais",
+      "nome": "Integração com Dispositivos Seriais",
+      "descricao": "Conecta balanças, gavetas e outros equipamentos por porta serial.",
+      "categoria": "Desktop e Hardware",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-serialport",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "integracao-com-dispositivos-seriais-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DESK-004",
+      "idTecnico": "artisys-remote-support",
+      "slug": "suporte-remoto",
+      "nome": "Suporte Remoto",
+      "descricao": "Abre sessões controladas de suporte remoto para aplicativos desktop.",
+      "categoria": "Desktop e Hardware",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-remote-support",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "suporte-remoto-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DOC-001",
+      "idTecnico": "artisys-annotations",
+      "slug": "anotacoes-em-imagens-e-pdfs",
+      "nome": "Anotações em Imagens e PDFs",
+      "descricao": "Adiciona marcações e anotações reutilizáveis em imagens e documentos PDF.",
+      "categoria": "Documentos e Mídia",
+      "versao": "1.0.0",
+      "estadoTecnico": "stable",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-annotations",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "anotacoes-em-imagens-e-pdfs-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DOC-002",
+      "idTecnico": "artisys-media",
+      "slug": "audio-video-e-animacoes",
+      "nome": "Áudio, Vídeo e Animações",
+      "descricao": "Fornece operações reutilizáveis para mídia, áudio, vídeo e manifestos de animação.",
+      "categoria": "Documentos e Mídia",
+      "versao": "1.0.0",
+      "estadoTecnico": "stable",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-media",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "audio-video-e-animacoes-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DOC-003",
+      "idTecnico": "artisys-doc-convert",
+      "slug": "conversao-de-documentos",
+      "nome": "Conversão de Documentos",
+      "descricao": "Converte documentos entre formatos sob demanda, sem serviço externo obrigatório.",
+      "categoria": "Documentos e Mídia",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-doc-convert",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "conversao-de-documentos-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DOC-004",
+      "idTecnico": "artisys-office",
+      "slug": "documentos-e-planilhas-office",
+      "nome": "Documentos e Planilhas Office",
+      "descricao": "Manipula documentos, planilhas e apresentações em formatos de escritório.",
+      "categoria": "Documentos e Mídia",
+      "versao": "1.0.0",
+      "estadoTecnico": "stable",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-office",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "documentos-e-planilhas-office-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DOC-005",
+      "idTecnico": "artisys-pdf",
+      "slug": "geracao-e-leitura-de-pdfs",
+      "nome": "Geração e Leitura de PDFs",
+      "descricao": "Gera, visualiza, destaca e anota documentos PDF.",
+      "categoria": "Documentos e Mídia",
+      "versao": "1.0.0",
+      "estadoTecnico": "stable",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-pdf",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "geracao-e-leitura-de-pdfs-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DOC-006",
+      "idTecnico": "artisys-documents",
+      "slug": "leitura-e-processamento-de-documentos",
+      "nome": "Leitura e Processamento de Documentos",
+      "descricao": "Extrai e processa conteúdo de documentos e imagens com OCR e visão computacional.",
+      "categoria": "Documentos e Mídia",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-documents",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "leitura-e-processamento-de-documentos-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DOC-007",
+      "idTecnico": "artisys-video-engine",
+      "slug": "processamento-e-edicao-de-video",
+      "nome": "Processamento e Edição de Vídeo",
+      "descricao": "Executa jobs e timelines locais para processamento e composição de vídeo.",
+      "categoria": "Documentos e Mídia",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-video-engine",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "processamento-e-edicao-de-video-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-DOC-008",
+      "idTecnico": "artisys-ocr",
+      "slug": "reconhecimento-de-texto-ocr",
+      "nome": "Reconhecimento de Texto (OCR)",
+      "descricao": "Oferece uma interface única para reconhecer texto em imagens e documentos.",
+      "categoria": "Documentos e Mídia",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-ocr",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "reconhecimento-de-texto-ocr-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-AGRO-001",
+      "idTecnico": "artisys-agro-contract",
+      "slug": "integracao-e-contratos-entre-sistemas-agro",
+      "nome": "Integração e Contratos entre Sistemas Agro",
+      "descricao": "Define contrato local-first, versionado e idempotente para integração segura entre produtos ArtiSys Agro.",
+      "categoria": "Engenharia e Agro",
+      "versao": "1.0.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-agro-contract",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "integracao-e-contratos-entre-sistemas-agro-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-AGRO-002",
+      "idTecnico": "artisys-agro-maps",
+      "slug": "mapas-e-dados-geoespaciais-agro",
+      "nome": "Mapas e Dados Geoespaciais Agro",
+      "descricao": "Valida, normaliza e prepara geometrias e mapas offline para produtos agrícolas e pecuários.",
+      "categoria": "Engenharia e Agro",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-agro-maps",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "mapas-e-dados-geoespaciais-agro-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-ENG-001",
+      "idTecnico": "artisys-bim",
+      "slug": "leitura-e-processamento-bim-ifc",
+      "nome": "Leitura e Processamento BIM/IFC",
+      "descricao": "Lê modelos IFC, propriedades, quantidades e informações reutilizáveis de projetos BIM.",
+      "categoria": "Engenharia e BIM",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-bim",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "leitura-e-processamento-bim-ifc-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-001",
+      "idTecnico": "artisys-approvals",
+      "slug": "aprovacoes",
+      "nome": "Aprovações",
+      "descricao": "Orquestra aprovações em múltiplas etapas, decisões, rejeições e histórico.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-approvals",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "aprovacoes-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-002",
+      "idTecnico": "artisys-assets",
+      "slug": "cadastro-de-ativos",
+      "nome": "Cadastro de Ativos",
+      "descricao": "Cadastra ativos genéricos com situação, localização, responsável, tags e metadados.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-assets",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "cadastro-de-ativos-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-003",
+      "idTecnico": "artisys-catalog",
+      "slug": "catalogo-de-produtos-e-servicos",
+      "nome": "Catálogo de Produtos e Serviços",
+      "descricao": "Cadastra e organiza produtos, serviços, variantes, busca e ativação.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-catalog",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "catalogo-de-produtos-e-servicos-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-004",
+      "idTecnico": "artisys-checklists",
+      "slug": "checklists-e-inspecoes",
+      "nome": "Checklists e Inspeções",
+      "descricao": "Gerencia listas de verificação, evidências, progresso e conclusão.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-checklists",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "checklists-e-inspecoes-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-005",
+      "idTecnico": "artisys-asset-lifecycle",
+      "slug": "ciclo-de-vida-de-ativos",
+      "nome": "Ciclo de Vida de Ativos",
+      "descricao": "Registra aquisição, disponibilidade, manutenção, indisponibilidade e baixa de ativos.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-asset-lifecycle",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "ciclo-de-vida-de-ativos-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-006",
+      "idTecnico": "artisys-contacts",
+      "slug": "contatos-e-organizacoes",
+      "nome": "Contatos e Organizações",
+      "descricao": "Normaliza pessoas, empresas, canais de contato, endereços e identificadores.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-contacts",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "contatos-e-organizacoes-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-007",
+      "idTecnico": "artisys-custody",
+      "slug": "custodia-e-emprestimos",
+      "nome": "Custódia e Empréstimos",
+      "descricao": "Controla retirada, responsável, prazo, devolução e condição de ativos.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-custody",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "custodia-e-emprestimos-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-008",
+      "idTecnico": "artisys-inventory",
+      "slug": "estoque-e-movimentacoes",
+      "nome": "Estoque e Movimentações",
+      "descricao": "Controla entradas, saídas, reservas, lotes, séries e saldo disponível.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-inventory",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "estoque-e-movimentacoes-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-009",
+      "idTecnico": "artisys-maintenance",
+      "slug": "manutencao-preventiva",
+      "nome": "Manutenção Preventiva",
+      "descricao": "Planeja manutenção por tempo ou medidor e calcula próximos vencimentos.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-maintenance",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "manutencao-preventiva-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-010",
+      "idTecnico": "artisys-metering",
+      "slug": "medidores-e-leituras",
+      "nome": "Medidores e Leituras",
+      "descricao": "Registra horímetro, odômetro, ciclos e outros medidores com deltas e validação.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-metering",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "medidores-e-leituras-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-011",
+      "idTecnico": "artisys-workflow-engine",
+      "slug": "motor-de-fluxos-de-trabalho",
+      "nome": "Motor de Fluxos de Trabalho",
+      "descricao": "Executa máquinas de estado determinísticas com transições, guards e histórico.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-workflow-engine",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "motor-de-fluxos-de-trabalho-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-012",
+      "idTecnico": "artisys-finance-domain",
+      "slug": "motor-financeiro-e-conciliacao",
+      "nome": "Motor Financeiro e Conciliação",
+      "descricao": "Processa regras financeiras, duplicidades, transferências e conciliação de forma determinística.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-finance-domain",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "motor-financeiro-e-conciliacao-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-013",
+      "idTecnico": "artisys-os",
+      "slug": "ordens-de-servico",
+      "nome": "Ordens de Serviço",
+      "descricao": "Gerencia abertura, estados, transições e histórico de ordens de serviço.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-os",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "ordens-de-servico-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-014",
+      "idTecnico": "artisys-pricing",
+      "slug": "precos-descontos-e-combos",
+      "nome": "Preços, Descontos e Combos",
+      "descricao": "Calcula preços por quantidade, faixas, descontos, combos e valores de linha.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-pricing",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "precos-descontos-e-combos-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-GEST-015",
+      "idTecnico": "artisys-reporting",
+      "slug": "relatorios-e-indicadores",
+      "nome": "Relatórios e Indicadores",
+      "descricao": "Aplica filtros, agrupamentos e agregações e exporta resultados para CSV.",
+      "categoria": "Gestão e Operação",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-reporting",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "relatorios-e-indicadores-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-UI-001",
+      "idTecnico": "artisys-ui-builder",
+      "slug": "construtor-de-interfaces",
+      "nome": "Construtor de Interfaces",
+      "descricao": "Cria páginas e blocos de interface editáveis e portáveis.",
+      "categoria": "Interface e Produtividade",
+      "versao": "1.0.0",
+      "estadoTecnico": "stable",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-ui-builder",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "construtor-de-interfaces-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-UI-002",
+      "idTecnico": "artisys-workflows",
+      "slug": "fluxos-de-trabalho-visuais",
+      "nome": "Fluxos de Trabalho Visuais",
+      "descricao": "Modela fluxos, dependências e processos com editores visuais.",
+      "categoria": "Interface e Produtividade",
+      "versao": "1.0.0",
+      "estadoTecnico": "stable",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-workflows",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "fluxos-de-trabalho-visuais-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-UI-003",
+      "idTecnico": "artisys-dashboard",
+      "slug": "paineis-e-indicadores",
+      "nome": "Painéis e Indicadores",
+      "descricao": "Monta dashboards, painéis redimensionáveis, grades e visualizações de dados.",
+      "categoria": "Interface e Produtividade",
+      "versao": "1.0.0",
+      "estadoTecnico": "stable",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-dashboard",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "paineis-e-indicadores-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-UI-004",
+      "idTecnico": "artisys-planning",
+      "slug": "planejamento-e-cronogramas",
+      "nome": "Planejamento e Cronogramas",
+      "descricao": "Gerencia Gantt, calendário, progresso, recursos e conflitos de planejamento.",
+      "categoria": "Interface e Produtividade",
+      "versao": "1.0.0",
+      "estadoTecnico": "stable",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-planning",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "planejamento-e-cronogramas-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-001",
+      "idTecnico": "artisys-auth-rbac",
+      "slug": "acesso-e-permissoes",
+      "nome": "Acesso e Permissões",
+      "descricao": "Gerencia autenticação local, usuários, papéis, permissões e proteção de ações.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-auth-rbac",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "acesso-e-permissoes-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-002",
+      "idTecnico": "artisys-alerts",
+      "slug": "alertas-e-notificacoes",
+      "nome": "Alertas e Notificações",
+      "descricao": "Gerencia alertas locais, vencimentos, severidade e notificações internas com estado lido/não lido.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-alerts",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "alertas-e-notificacoes-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-003",
+      "idTecnico": "artisys-storage",
+      "slug": "armazenamento-de-dados",
+      "nome": "Armazenamento de Dados",
+      "descricao": "Padroniza armazenamento em memória, banco local e namespaces isolados.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.2.1",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-storage",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "armazenamento-de-dados-v0.2.1.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-004",
+      "idTecnico": "artisys-feature-flags",
+      "slug": "ativacao-controlada-de-funcionalidades",
+      "nome": "Ativação Controlada de Funcionalidades",
+      "descricao": "Liga ou desliga recursos por padrão, empresa ou usuário sem duplicar código.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-feature-flags",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "ativacao-controlada-de-funcionalidades-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-005",
+      "idTecnico": "artisys-local-backend",
+      "slug": "backend-local-embutido",
+      "nome": "Backend Local Embutido",
+      "descricao": "Fornece backend local opcional para aplicações que precisam de API e persistência no próprio dispositivo.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-local-backend",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "backend-local-embutido-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-006",
+      "idTecnico": "artisys-backup",
+      "slug": "backup-e-restauracao",
+      "nome": "Backup e Restauração",
+      "descricao": "Cria cópias de segurança verificáveis, retenção e checagem de integridade.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-backup",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "backup-e-restauracao-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-007",
+      "idTecnico": "artisys-search",
+      "slug": "busca-local",
+      "nome": "Busca Local",
+      "descricao": "Indexa e pesquisa entidades localmente com pesos, filtros e ranking determinístico.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-search",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "busca-local-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-008",
+      "idTecnico": "artisys-eventbus",
+      "slug": "comunicacao-entre-modulos",
+      "nome": "Comunicação entre Módulos",
+      "descricao": "Permite que partes do sistema troquem eventos sem ficarem fortemente acopladas.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-eventbus",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "comunicacao-entre-modulos-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-009",
+      "idTecnico": "artisys-settings",
+      "slug": "configuracoes-do-sistema",
+      "nome": "Configurações do Sistema",
+      "descricao": "Centraliza preferências, valores padrão e configurações separadas por namespace.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-settings",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "configuracoes-do-sistema-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-010",
+      "idTecnico": "artisys-exporter",
+      "slug": "exportacao-de-dados",
+      "nome": "Exportação de Dados",
+      "descricao": "Exporta CSV e JSON e gera modelo tabular neutro para adaptadores de planilha.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-exporter",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "exportacao-de-dados-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-011",
+      "idTecnico": "artisys-audit-log",
+      "slug": "historico-e-auditoria",
+      "nome": "Histórico e Auditoria",
+      "descricao": "Registra quem realizou cada ação, em qual entidade e com quais metadados.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-audit-log",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "historico-e-auditoria-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-012",
+      "idTecnico": "artisys-importer",
+      "slug": "importacao-de-dados",
+      "nome": "Importação de Dados",
+      "descricao": "Mapeia, pré-visualiza, valida, detecta duplicidades e coordena rollback de importações.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-importer",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "importacao-de-dados-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-013",
+      "idTecnico": "artisys-licensing",
+      "slug": "licenciamento-offline",
+      "nome": "Licenciamento Offline",
+      "descricao": "Gerencia licenças locais, expiração, vínculo ao dispositivo e liberação de funcionalidades.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-licensing",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "licenciamento-offline-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-014",
+      "idTecnico": "artisys-multitenancy",
+      "slug": "multiempresa-e-isolamento-de-dados",
+      "nome": "Multiempresa e Isolamento de Dados",
+      "descricao": "Separa empresas ou clientes e impede acesso indevido entre contextos diferentes.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-multitenancy",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "multiempresa-e-isolamento-de-dados-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-PLAT-015",
+      "idTecnico": "artisys-sync",
+      "slug": "sincronizacao-de-dados",
+      "nome": "Sincronização de Dados",
+      "descricao": "Sincroniza alterações offline, aplica tentativas automáticas e resolve conflitos.",
+      "categoria": "Plataforma e Dados",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-sync",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "sincronizacao-de-dados-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-QUAL-001",
+      "idTecnico": "artisys-api-contracts",
+      "slug": "contratos-e-compatibilidade-de-apis",
+      "nome": "Contratos e Compatibilidade de APIs",
+      "descricao": "Valida contratos de API, compatibilidade entre serviços e clientes gerados.",
+      "categoria": "Qualidade e Entrega",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-api-contracts",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "contratos-e-compatibilidade-de-apis-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-QUAL-002",
+      "idTecnico": "artisys-release",
+      "slug": "empacotamento-e-publicacao",
+      "nome": "Empacotamento e Publicação",
+      "descricao": "Orquestra validações, assinatura, hashes e etapas necessárias para publicar uma versão.",
+      "categoria": "Qualidade e Entrega",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-release",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "empacotamento-e-publicacao-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-QUAL-003",
+      "idTecnico": "artisys-privacy",
+      "slug": "privacidade-e-protecao-de-dados",
+      "nome": "Privacidade e Proteção de Dados",
+      "descricao": "Detecta, anonimiza e mascara dados pessoais e informações sensíveis.",
+      "categoria": "Qualidade e Entrega",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-privacy",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "privacidade-e-protecao-de-dados-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-QUAL-004",
+      "idTecnico": "artisys-security",
+      "slug": "seguranca-automatizada",
+      "nome": "Segurança Automatizada",
+      "descricao": "Verifica segredos expostos, vulnerabilidades e problemas estáticos de segurança.",
+      "categoria": "Qualidade e Entrega",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-security",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "seguranca-automatizada-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-QUAL-005",
+      "idTecnico": "artisys-qa",
+      "slug": "testes-e-controle-de-qualidade",
+      "nome": "Testes e Controle de Qualidade",
+      "descricao": "Executa testes de interface, evidências, demonstrações e validação visual opcional.",
+      "categoria": "Qualidade e Entrega",
+      "versao": "2.4.1",
+      "estadoTecnico": "stable",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-qa",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "testes-e-controle-de-qualidade-v2.4.1.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-QUAL-006",
+      "idTecnico": "artisys-ai-quality",
+      "slug": "testes-e-qualidade-de-ia",
+      "nome": "Testes e Qualidade de IA",
+      "descricao": "Avalia prompts, respostas e regressões de funcionalidades que usam inteligência artificial.",
+      "categoria": "Qualidade e Entrega",
+      "versao": "0.2.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-ai-quality",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "testes-e-qualidade-de-ia-v0.2.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-QUAL-007",
+      "idTecnico": "artisys-product-qa",
+      "slug": "validacao-completa-do-produto",
+      "nome": "Validação Completa do Produto",
+      "descricao": "Agrupa QA, segurança e contratos de API para validar um produto de ponta a ponta.",
+      "categoria": "Qualidade e Entrega",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-product-qa",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "validacao-completa-do-produto-v0.1.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "DKT-QUAL-008",
+      "idTecnico": "artisys-release-validator",
+      "slug": "validacao-de-instaladores-e-releases",
+      "nome": "Validação de Instaladores e Releases",
+      "descricao": "Testa instaladores, atualização, stress e integridade antes da distribuição.",
+      "categoria": "Qualidade e Entrega",
+      "versao": "0.1.0",
+      "estadoTecnico": "implemented",
+      "estadoComercial": "preparando",
+      "origem": {
+        "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+        "caminho": "modules/artisys-release-validator",
+        "commit": null
+      },
+      "runtime": [],
+      "dependenciaPagaObrigatoria": false,
+      "dependenciasOpcionais": [],
+      "upstreams": [],
+      "inclui": [
+        "código-fonte do módulo",
+        "documentação do kit",
+        "exemplo/testes quando disponíveis na origem"
+      ],
+      "naoInclui": [
+        "serviços pagos de terceiros",
+        "credenciais",
+        "infraestrutura always-on obrigatória"
+      ],
+      "comandosValidacao": [],
+      "precoSugeridoBRL": null,
+      "documentacaoConferida": false,
+      "licencasConferidas": false,
+      "build": {
+        "habilitado": true
+      },
+      "zip": "validacao-de-instaladores-e-releases-v0.1.0.zip"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-QUAL-001",
+  "idTecnico": "artisys-api-contracts",
+  "slug": "contratos-e-compatibilidade-de-apis",
+  "nome": "Contratos e Compatibilidade de APIs",
+  "descricao": "Valida contratos de API, compatibilidade entre serviços e clientes gerados.",
+  "categoria": "Qualidade e Entrega",
+  "versao": "0.2.0",
+  "estadoTecnico": "implemented",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-api-contracts",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "contratos-e-compatibilidade-de-apis-v0.2.0.zip"
+}

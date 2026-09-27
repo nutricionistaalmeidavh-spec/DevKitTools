@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "sku": "PKT-007",
+  "slug": "saas",
+  "nome": "SaaS",
+  "versao": "1.0.0",
+  "kits": [
+    "multiempresa-e-isolamento-de-dados",
+    "acesso-e-permissoes",
+    "sincronizacao-de-dados",
+    "ativacao-controlada-de-funcionalidades",
+    "comunicacao-entre-modulos"
+  ],
+  "estadoComercial": "preparando",
+  "precoSugeridoBRL": null,
+  "zip": "saas-v1.0.0.zip"
+}

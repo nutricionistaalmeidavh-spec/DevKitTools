@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "sku": "PKT-006",
+  "slug": "ativos-e-manutencao",
+  "nome": "Ativos e Manutenção",
+  "versao": "1.0.0",
+  "kits": [
+    "cadastro-de-ativos",
+    "ciclo-de-vida-de-ativos",
+    "custodia-e-emprestimos",
+    "manutencao-preventiva",
+    "medidores-e-leituras"
+  ],
+  "estadoComercial": "preparando",
+  "precoSugeridoBRL": null,
+  "zip": "ativos-e-manutencao-v1.0.0.zip"
+}

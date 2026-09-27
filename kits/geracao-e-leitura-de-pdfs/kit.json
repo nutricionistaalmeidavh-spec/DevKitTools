@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-DOC-005",
+  "idTecnico": "artisys-pdf",
+  "slug": "geracao-e-leitura-de-pdfs",
+  "nome": "Geração e Leitura de PDFs",
+  "descricao": "Gera, visualiza, destaca e anota documentos PDF.",
+  "categoria": "Documentos e Mídia",
+  "versao": "1.0.0",
+  "estadoTecnico": "stable",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-pdf",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "geracao-e-leitura-de-pdfs-v1.0.0.zip"
+}

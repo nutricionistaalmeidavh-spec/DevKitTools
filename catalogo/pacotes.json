@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "pacotes": [
+    {
+      "schemaVersion": 1,
+      "sku": "PKT-001",
+      "slug": "base-desktop",
+      "nome": "Base Desktop",
+      "versao": "1.0.0",
+      "kits": [
+        "estrutura-base-para-aplicativos-desktop",
+        "armazenamento-de-dados",
+        "configuracoes-do-sistema",
+        "backup-e-restauracao",
+        "licenciamento-offline",
+        "historico-e-auditoria"
+      ],
+      "estadoComercial": "preparando",
+      "precoSugeridoBRL": null,
+      "zip": "base-desktop-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "PKT-002",
+      "slug": "base-empresarial",
+      "nome": "Base Empresarial",
+      "versao": "1.0.0",
+      "kits": [
+        "acesso-e-permissoes",
+        "historico-e-auditoria",
+        "importacao-de-dados",
+        "exportacao-de-dados",
+        "relatorios-e-indicadores",
+        "ativacao-controlada-de-funcionalidades",
+        "alertas-e-notificacoes"
+      ],
+      "estadoComercial": "preparando",
+      "precoSugeridoBRL": null,
+      "zip": "base-empresarial-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "PKT-003",
+      "slug": "base-pdv",
+      "nome": "Base PDV",
+      "versao": "1.0.0",
+      "kits": [
+        "estoque-e-movimentacoes",
+        "catalogo-de-produtos-e-servicos",
+        "precos-descontos-e-combos",
+        "impressao-cupons-e-etiquetas",
+        "integracao-com-dispositivos-seriais"
+      ],
+      "estadoComercial": "preparando",
+      "precoSugeridoBRL": null,
+      "zip": "base-pdv-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "PKT-004",
+      "slug": "documentos",
+      "nome": "Documentos",
+      "versao": "1.0.0",
+      "kits": [
+        "geracao-e-leitura-de-pdfs",
+        "reconhecimento-de-texto-ocr",
+        "leitura-e-processamento-de-documentos",
+        "documentos-e-planilhas-office",
+        "conversao-de-documentos",
+        "anotacoes-em-imagens-e-pdfs"
+      ],
+      "estadoComercial": "preparando",
+      "precoSugeridoBRL": null,
+      "zip": "documentos-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "PKT-005",
+      "slug": "operacoes",
+      "nome": "Operações",
+      "versao": "1.0.0",
+      "kits": [
+        "ordens-de-servico",
+        "motor-de-fluxos-de-trabalho",
+        "aprovacoes",
+        "checklists-e-inspecoes",
+        "contatos-e-organizacoes"
+      ],
+      "estadoComercial": "preparando",
+      "precoSugeridoBRL": null,
+      "zip": "operacoes-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "PKT-006",
+      "slug": "ativos-e-manutencao",
+      "nome": "Ativos e Manutenção",
+      "versao": "1.0.0",
+      "kits": [
+        "cadastro-de-ativos",
+        "ciclo-de-vida-de-ativos",
+        "custodia-e-emprestimos",
+        "manutencao-preventiva",
+        "medidores-e-leituras"
+      ],
+      "estadoComercial": "preparando",
+      "precoSugeridoBRL": null,
+      "zip": "ativos-e-manutencao-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "PKT-007",
+      "slug": "saas",
+      "nome": "SaaS",
+      "versao": "1.0.0",
+      "kits": [
+        "multiempresa-e-isolamento-de-dados",
+        "acesso-e-permissoes",
+        "sincronizacao-de-dados",
+        "ativacao-controlada-de-funcionalidades",
+        "comunicacao-entre-modulos"
+      ],
+      "estadoComercial": "preparando",
+      "precoSugeridoBRL": null,
+      "zip": "saas-v1.0.0.zip"
+    },
+    {
+      "schemaVersion": 1,
+      "sku": "PKT-008",
+      "slug": "engenharia",
+      "nome": "Engenharia",
+      "versao": "1.0.0",
+      "kits": [
+        "leitura-e-processamento-bim-ifc",
+        "geracao-e-leitura-de-pdfs",
+        "anotacoes-em-imagens-e-pdfs",
+        "relatorios-e-indicadores"
+      ],
+      "estadoComercial": "preparando",
+      "precoSugeridoBRL": null,
+      "zip": "engenharia-v1.0.0.zip"
+    }
+  ]
+}

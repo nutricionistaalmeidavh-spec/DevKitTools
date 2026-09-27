@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-WEB-001",
+  "idTecnico": "artisys-whatsapp-launcher",
+  "slug": "abertura-de-conversas-no-whatsapp",
+  "nome": "Abertura de Conversas no WhatsApp",
+  "descricao": "Abre WhatsApp ou WhatsApp Web com número e mensagem pré-preenchidos, sem envio automático obrigatório.",
+  "categoria": "Aplicativos Web e Mobile",
+  "versao": "0.1.0",
+  "estadoTecnico": "implemented",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-whatsapp-launcher",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "abertura-de-conversas-no-whatsapp-v0.1.0.zip"
+}

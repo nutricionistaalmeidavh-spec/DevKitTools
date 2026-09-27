@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-UI-004",
+  "idTecnico": "artisys-planning",
+  "slug": "planejamento-e-cronogramas",
+  "nome": "Planejamento e Cronogramas",
+  "descricao": "Gerencia Gantt, calendário, progresso, recursos e conflitos de planejamento.",
+  "categoria": "Interface e Produtividade",
+  "versao": "1.0.0",
+  "estadoTecnico": "stable",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-planning",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "planejamento-e-cronogramas-v1.0.0.zip"
+}

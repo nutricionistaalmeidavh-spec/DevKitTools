@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-ENG-001",
+  "idTecnico": "artisys-bim",
+  "slug": "leitura-e-processamento-bim-ifc",
+  "nome": "Leitura e Processamento BIM/IFC",
+  "descricao": "Lê modelos IFC, propriedades, quantidades e informações reutilizáveis de projetos BIM.",
+  "categoria": "Engenharia e BIM",
+  "versao": "0.2.0",
+  "estadoTecnico": "implemented",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-bim",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "leitura-e-processamento-bim-ifc-v0.2.0.zip"
+}

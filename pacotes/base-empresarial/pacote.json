@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "sku": "PKT-002",
+  "slug": "base-empresarial",
+  "nome": "Base Empresarial",
+  "versao": "1.0.0",
+  "kits": [
+    "acesso-e-permissoes",
+    "historico-e-auditoria",
+    "importacao-de-dados",
+    "exportacao-de-dados",
+    "relatorios-e-indicadores",
+    "ativacao-controlada-de-funcionalidades",
+    "alertas-e-notificacoes"
+  ],
+  "estadoComercial": "preparando",
+  "precoSugeridoBRL": null,
+  "zip": "base-empresarial-v1.0.0.zip"
+}

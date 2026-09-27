@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sku": "DKT-AGRO-001",
+  "idTecnico": "artisys-agro-contract",
+  "slug": "integracao-e-contratos-entre-sistemas-agro",
+  "nome": "Integração e Contratos entre Sistemas Agro",
+  "descricao": "Define contrato local-first, versionado e idempotente para integração segura entre produtos ArtiSys Agro.",
+  "categoria": "Engenharia e Agro",
+  "versao": "1.0.0",
+  "estadoTecnico": "implemented",
+  "estadoComercial": "preparando",
+  "origem": {
+    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
+    "caminho": "modules/artisys-agro-contract",
+    "commit": null
+  },
+  "runtime": [],
+  "dependenciaPagaObrigatoria": false,
+  "dependenciasOpcionais": [],
+  "upstreams": [],
+  "inclui": [
+    "código-fonte do módulo",
+    "documentação do kit",
+    "exemplo/testes quando disponíveis na origem"
+  ],
+  "naoInclui": [
+    "serviços pagos de terceiros",
+    "credenciais",
+    "infraestrutura always-on obrigatória"
+  ],
+  "comandosValidacao": [],
+  "precoSugeridoBRL": null,
+  "documentacaoConferida": false,
+  "licencasConferidas": false,
+  "build": {
+    "habilitado": true
+  },
+  "zip": "integracao-e-contratos-entre-sistemas-agro-v1.0.0.zip"
+}

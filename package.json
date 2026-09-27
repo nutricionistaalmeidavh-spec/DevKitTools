@@ -1,0 +1,26 @@
+{
+  "name": "devkittools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test",
+    "gerar:catalogo": "node scripts/gerar-catalogo.mjs",
+    "preparar:kits": "node scripts/preparar-kits.mjs",
+    "validar": "node scripts/validar-catalogo.mjs",
+    "matriz": "node scripts/gerar-matriz.mjs",
+    "montar:kit": "node scripts/montar-kit.mjs",
+    "montar:todos": "node scripts/montar-todos.mjs",
+    "montar:pacotes": "node scripts/montar-pacotes.mjs",
+    "checksums": "node scripts/gerar-checksums.mjs",
+    "verificar:secrets": "node scripts/verificar-segredos.mjs",
+    "verificar:release": "node scripts/verificar-release.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "jszip": "^3.10.1",
+    "semver": "^7.7.2"
+  }
+}

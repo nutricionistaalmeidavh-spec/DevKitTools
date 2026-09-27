@@ -1,0 +1,64 @@
+idTecnico	versao	estadoTecnico	categoria	nome	descricao
+artisys-qa	2.4.1	stable	Qualidade e Entrega	Testes e Controle de Qualidade	Executa testes de interface, evidências, demonstrações e validação visual opcional.
+artisys-pdf	1.0.0	stable	Documentos e Mídia	Geração e Leitura de PDFs	Gera, visualiza, destaca e anota documentos PDF.
+artisys-workflows	1.0.0	stable	Interface e Produtividade	Fluxos de Trabalho Visuais	Modela fluxos, dependências e processos com editores visuais.
+artisys-capture	1.0.0	stable	Arquivos e Captura	Captura por Câmera e Códigos	Captura câmera ou arquivo e lê QR codes, códigos de barras e imagens.
+artisys-dashboard	1.0.0	stable	Interface e Produtividade	Painéis e Indicadores	Monta dashboards, painéis redimensionáveis, grades e visualizações de dados.
+artisys-planning	1.0.0	stable	Interface e Produtividade	Planejamento e Cronogramas	Gerencia Gantt, calendário, progresso, recursos e conflitos de planejamento.
+artisys-media	1.0.0	stable	Documentos e Mídia	Áudio, Vídeo e Animações	Fornece operações reutilizáveis para mídia, áudio, vídeo e manifestos de animação.
+artisys-office	1.0.0	stable	Documentos e Mídia	Documentos e Planilhas Office	Manipula documentos, planilhas e apresentações em formatos de escritório.
+artisys-ui-builder	1.0.0	stable	Interface e Produtividade	Construtor de Interfaces	Cria páginas e blocos de interface editáveis e portáveis.
+artisys-upload	1.0.0	stable	Arquivos e Captura	Envio e Validação de Arquivos	Controla upload, políticas, validações, filas e seleção de arquivos.
+artisys-files	0.1.0	implemented	Arquivos e Captura	Organização e Exploração de Arquivos	Cria workspaces espelhados em pastas locais com árvore, drag-and-drop, busca e acompanhamento de alterações.
+artisys-annotations	1.0.0	stable	Documentos e Mídia	Anotações em Imagens e PDFs	Adiciona marcações e anotações reutilizáveis em imagens e documentos PDF.
+artisys-serialport	0.1.0	implemented	Desktop e Hardware	Integração com Dispositivos Seriais	Conecta balanças, gavetas e outros equipamentos por porta serial.
+artisys-printing	0.1.0	implemented	Desktop e Hardware	Impressão, Cupons e Etiquetas	Gera e imprime recibos, cupons, etiquetas e saídas para impressoras térmicas.
+artisys-security	0.2.0	implemented	Qualidade e Entrega	Segurança Automatizada	Verifica segredos expostos, vulnerabilidades e problemas estáticos de segurança.
+artisys-documents	0.2.0	implemented	Documentos e Mídia	Leitura e Processamento de Documentos	Extrai e processa conteúdo de documentos e imagens com OCR e visão computacional.
+artisys-api-contracts	0.2.0	implemented	Qualidade e Entrega	Contratos e Compatibilidade de APIs	Valida contratos de API, compatibilidade entre serviços e clientes gerados.
+artisys-video-engine	0.1.0	implemented	Documentos e Mídia	Processamento e Edição de Vídeo	Executa jobs e timelines locais para processamento e composição de vídeo.
+artisys-doc-convert	0.1.0	implemented	Documentos e Mídia	Conversão de Documentos	Converte documentos entre formatos sob demanda, sem serviço externo obrigatório.
+artisys-local-backend	0.1.0	implemented	Plataforma e Dados	Backend Local Embutido	Fornece backend local opcional para aplicações que precisam de API e persistência no próprio dispositivo.
+artisys-remote-support	0.1.0	implemented	Desktop e Hardware	Suporte Remoto	Abre sessões controladas de suporte remoto para aplicativos desktop.
+artisys-release	0.1.0	implemented	Qualidade e Entrega	Empacotamento e Publicação	Orquestra validações, assinatura, hashes e etapas necessárias para publicar uma versão.
+artisys-release-validator	0.1.0	implemented	Qualidade e Entrega	Validação de Instaladores e Releases	Testa instaladores, atualização, stress e integridade antes da distribuição.
+artisys-desktop-shell	0.1.0	implemented	Desktop e Hardware	Estrutura Base para Aplicativos Desktop	Padroniza estrutura desktop, deep links, configurações, logs e hooks de atualização.
+artisys-whatsapp-launcher	0.1.0	implemented	Aplicativos Web e Mobile	Abertura de Conversas no WhatsApp	Abre WhatsApp ou WhatsApp Web com número e mensagem pré-preenchidos, sem envio automático obrigatório.
+artisys-ocr	0.1.0	implemented	Documentos e Mídia	Reconhecimento de Texto (OCR)	Oferece uma interface única para reconhecer texto em imagens e documentos.
+artisys-product-qa	0.1.0	implemented	Qualidade e Entrega	Validação Completa do Produto	Agrupa QA, segurança e contratos de API para validar um produto de ponta a ponta.
+artisys-licensing	0.1.0	implemented	Plataforma e Dados	Licenciamento Offline	Gerencia licenças locais, expiração, vínculo ao dispositivo e liberação de funcionalidades.
+artisys-ai-quality	0.2.0	implemented	Qualidade e Entrega	Testes e Qualidade de IA	Avalia prompts, respostas e regressões de funcionalidades que usam inteligência artificial.
+artisys-privacy	0.2.0	implemented	Qualidade e Entrega	Privacidade e Proteção de Dados	Detecta, anonimiza e mascara dados pessoais e informações sensíveis.
+artisys-bim	0.2.0	implemented	Engenharia e BIM	Leitura e Processamento BIM/IFC	Lê modelos IFC, propriedades, quantidades e informações reutilizáveis de projetos BIM.
+artisys-eventbus	0.2.0	implemented	Plataforma e Dados	Comunicação entre Módulos	Permite que partes do sistema troquem eventos sem ficarem fortemente acopladas.
+artisys-alerts	0.2.0	implemented	Plataforma e Dados	Alertas e Notificações	Gerencia alertas locais, vencimentos, severidade e notificações internas com estado lido/não lido.
+artisys-backup	0.2.0	implemented	Plataforma e Dados	Backup e Restauração	Cria cópias de segurança verificáveis, retenção e checagem de integridade.
+artisys-importer	0.2.0	implemented	Plataforma e Dados	Importação de Dados	Mapeia, pré-visualiza, valida, detecta duplicidades e coordena rollback de importações.
+artisys-finance-domain	0.1.0	implemented	Gestão e Operação	Motor Financeiro e Conciliação	Processa regras financeiras, duplicidades, transferências e conciliação de forma determinística.
+artisys-auth-rbac	0.2.0	implemented	Plataforma e Dados	Acesso e Permissões	Gerencia autenticação local, usuários, papéis, permissões e proteção de ações.
+artisys-storage	0.2.1	implemented	Plataforma e Dados	Armazenamento de Dados	Padroniza armazenamento em memória, banco local e namespaces isolados.
+artisys-audit-log	0.1.0	implemented	Plataforma e Dados	Histórico e Auditoria	Registra quem realizou cada ação, em qual entidade e com quais metadados.
+artisys-sync	0.2.0	implemented	Plataforma e Dados	Sincronização de Dados	Sincroniza alterações offline, aplica tentativas automáticas e resolve conflitos.
+artisys-pwa-runtime	0.1.0	implemented	Aplicativos Web e Mobile	Aplicativo Web Instalável e Offline	Fornece cache, instalação, funcionamento offline e atualização controlada para PWAs.
+artisys-webview-bridge	0.1.0	implemented	Aplicativos Web e Mobile	Integração Web ↔ Aplicativo	Padroniza a comunicação segura entre uma interface WebView e o aplicativo nativo.
+artisys-inventory	0.2.0	implemented	Gestão e Operação	Estoque e Movimentações	Controla entradas, saídas, reservas, lotes, séries e saldo disponível.
+artisys-os	0.1.0	implemented	Gestão e Operação	Ordens de Serviço	Gerencia abertura, estados, transições e histórico de ordens de serviço.
+artisys-catalog	0.1.0	implemented	Gestão e Operação	Catálogo de Produtos e Serviços	Cadastra e organiza produtos, serviços, variantes, busca e ativação.
+artisys-pricing	0.1.0	implemented	Gestão e Operação	Preços, Descontos e Combos	Calcula preços por quantidade, faixas, descontos, combos e valores de linha.
+artisys-settings	0.1.0	implemented	Plataforma e Dados	Configurações do Sistema	Centraliza preferências, valores padrão e configurações separadas por namespace.
+artisys-multitenancy	0.1.0	implemented	Plataforma e Dados	Multiempresa e Isolamento de Dados	Separa empresas ou clientes e impede acesso indevido entre contextos diferentes.
+artisys-feature-flags	0.1.0	implemented	Plataforma e Dados	Ativação Controlada de Funcionalidades	Liga ou desliga recursos por padrão, empresa ou usuário sem duplicar código.
+artisys-checklists	0.1.0	implemented	Gestão e Operação	Checklists e Inspeções	Gerencia listas de verificação, evidências, progresso e conclusão.
+artisys-reporting	0.1.0	implemented	Gestão e Operação	Relatórios e Indicadores	Aplica filtros, agrupamentos e agregações e exporta resultados para CSV.
+artisys-workflow-engine	0.1.0	implemented	Gestão e Operação	Motor de Fluxos de Trabalho	Executa máquinas de estado determinísticas com transições, guards e histórico.
+artisys-approvals	0.1.0	implemented	Gestão e Operação	Aprovações	Orquestra aprovações em múltiplas etapas, decisões, rejeições e histórico.
+artisys-contacts	0.1.0	implemented	Gestão e Operação	Contatos e Organizações	Normaliza pessoas, empresas, canais de contato, endereços e identificadores.
+artisys-assets	0.1.0	implemented	Gestão e Operação	Cadastro de Ativos	Cadastra ativos genéricos com situação, localização, responsável, tags e metadados.
+artisys-asset-lifecycle	0.1.0	implemented	Gestão e Operação	Ciclo de Vida de Ativos	Registra aquisição, disponibilidade, manutenção, indisponibilidade e baixa de ativos.
+artisys-custody	0.1.0	implemented	Gestão e Operação	Custódia e Empréstimos	Controla retirada, responsável, prazo, devolução e condição de ativos.
+artisys-maintenance	0.1.0	implemented	Gestão e Operação	Manutenção Preventiva	Planeja manutenção por tempo ou medidor e calcula próximos vencimentos.
+artisys-metering	0.1.0	implemented	Gestão e Operação	Medidores e Leituras	Registra horímetro, odômetro, ciclos e outros medidores com deltas e validação.
+artisys-search	0.1.0	implemented	Plataforma e Dados	Busca Local	Indexa e pesquisa entidades localmente com pesos, filtros e ranking determinístico.
+artisys-exporter	0.1.0	implemented	Plataforma e Dados	Exportação de Dados	Exporta CSV e JSON e gera modelo tabular neutro para adaptadores de planilha.
+artisys-agro-contract	1.0.0	implemented	Engenharia e Agro	Integração e Contratos entre Sistemas Agro	Define contrato local-first, versionado e idempotente para integração segura entre produtos ArtiSys Agro.
+artisys-agro-maps	0.1.0	implemented	Engenharia e Agro	Mapas e Dados Geoespaciais Agro	Valida, normaliza e prepara geometrias e mapas offline para produtos agrícolas e pecuários.

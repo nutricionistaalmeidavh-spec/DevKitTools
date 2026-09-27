@@ -1,0 +1,8 @@
+node_modules/
+dist/
+_origem/
+.tmp/
+*.tmp
+*.log
+.superpowers/
+.DS_Store

@@ -1,0 +1,3 @@
+import fs from 'node:fs/promises';import path from 'node:path';import {sha256Arquivo} from './lib/empacotamento.mjs';
+export async function gerarChecksums(distDir=path.resolve('dist')){await fs.mkdir(distDir,{recursive:true});const files=(await fs.readdir(distDir)).filter(x=>x.endsWith('.zip')).sort();const linhas=[];for(const f of files)linhas.push(`${await sha256Arquivo(path.join(distDir,f))}  ${f}`);await fs.writeFile(path.join(distDir,'SHA256SUMS.txt'),linhas.join('\n')+(linhas.length?'\n':''));return linhas;}
+if(import.meta.url===new URL(process.argv[1],`file://${process.cwd()}/`).href){const linhas=await gerarChecksums();console.log(`Checksums gerados: ${linhas.length}`);}

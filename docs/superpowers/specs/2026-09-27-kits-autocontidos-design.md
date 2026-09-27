@@ -47,50 +47,38 @@ Após a migração:
 - atualizações de um kit são feitas por migração explícita/revisada de um novo snapshot;
 - a versão comercial do kit é controlada pelo `kit.json` no `DevKitTools`.
 
-Isso garante que uma versão vendida permaneça reproduzível mesmo se o repositório de origem mudar ou deixar de existir.
+Uma versão vendida deve permanecer reproduzível mesmo se a origem mudar ou deixar de existir.
 
 ## 4. Estratégia escolhida: snapshot comercial por kit
 
-### 4.1 Alternativas consideradas
+Alternativas consideradas:
 
-1. **Espelhar todo o `utilidades` dentro do `DevKitTools`**
-   - simples de copiar;
-   - carrega referências e ferramentas que não pertencem aos produtos vendidos;
-   - aumenta ruído, risco de licença e tamanho do repositório.
-
-2. **Git subtree/submodule**
-   - preserva histórico ou vínculo externo;
-   - mantém dependência conceitual e operacional entre repositórios;
-   - conflita com a intenção de o `DevKitTools` ser autocontido.
-
-3. **Snapshot comercial por kit — escolhido**
-   - copia somente o necessário para cada produto;
-   - cada ZIP fica independente;
-   - facilita auditoria de licença e segurança;
-   - mantém proveniência sem depender da origem na hora de vender.
+1. **Espelhar todo o `utilidades`**: simples, mas leva conteúdo que não pertence aos produtos e amplia riscos de licença, segurança e tamanho.
+2. **Git subtree/submodule**: preserva vínculo externo, mas mantém a dependência conceitual e operacional entre repositórios.
+3. **Snapshot comercial por kit — escolhido**: copia somente o necessário, mantém cada ZIP independente e permite auditoria por produto.
 
 ## 5. Migração inicial dos 63 kits
 
-A migração deve percorrer os 63 kits já registrados em `catalogo/kits.json`.
+A migração deve percorrer os 63 kits registrados em `catalogo/kits.json`.
 
 Para cada kit:
 
-1. localizar o módulo técnico de origem indicado em `kit.origem.caminho`;
+1. localizar o módulo indicado em `kit.origem.caminho`;
 2. copiar os arquivos permitidos para `kits/<slug>/produto/`;
-3. remover qualquer conteúdo proibido;
+3. excluir conteúdo proibido;
 4. registrar o commit de origem usado no snapshot;
-5. validar que o conteúdo copiado possui os arquivos necessários ao módulo;
-6. executar testes locais do módulo quando houver comando conhecido;
-7. manter as licenças e avisos de terceiros aplicáveis;
-8. somente após passar nos gates, considerar o snapshot técnico aceito.
+5. validar a estrutura mínima do módulo;
+6. executar testes locais quando houver comando conhecido;
+7. preservar licenças e avisos de terceiros;
+8. aceitar o snapshot somente depois dos gates técnicos e de segurança.
 
-A migração é uma operação de desenvolvimento. O resultado versionado dentro do `DevKitTools` é o que passa a ser vendido.
+A importação é uma operação de desenvolvimento. O resultado versionado no `DevKitTools` passa a ser o produto.
 
 ## 6. Regras de cópia
 
-### 6.1 Arquivos normalmente permitidos
+### 6.1 Normalmente permitido
 
-Copiar quando existirem e forem necessários:
+Copiar quando existir e for necessário:
 
 - `src/**`
 - `lib/**`
@@ -98,59 +86,51 @@ Copiar quando existirem e forem necessários:
 - `examples/**`
 - `test/**`
 - `tests/**`
-- `fixtures/**` somente quando sintéticos e necessários a testes
+- `fixtures/**` apenas quando sintéticos e necessários
 - `package.json`
 - lockfile aplicável quando necessário à reprodução
 - `module.json`
-- arquivos de configuração de build/teste
+- configurações de build/teste
 - `LICENSE`
 - `NOTICE`
-- documentação técnica necessária ao uso do módulo
+- documentação técnica necessária
 
-### 6.2 Arquivos sempre proibidos
+### 6.2 Sempre proibido
 
 Não copiar:
 
 - `.env`
 - `.env.*` com valores reais
-- chaves privadas (`*.pem`, `*.key`, certificados privados)
+- chaves privadas (`*.pem`, `*.key` e certificados privados)
 - credenciais ou tokens
-- bancos reais (`*.db`, `*.sqlite`, dumps de produção)
+- bancos reais (`*.db`, `*.sqlite`, dumps)
 - logs
 - dados de clientes
 - `node_modules`
 - caches
 - builds temporários
-- diretórios `.git`
+- `.git`
 - artefatos locais sem necessidade de distribuição
-- arquivos que contenham segredos detectados pelo gate de segurança
+- arquivos sinalizados pelo gate de secrets
 
-`.env.example` pode ser mantido desde que contenha somente placeholders.
+`.env.example` é permitido somente com placeholders.
 
 ## 7. Proveniência
 
-Cada kit continuará registrando a origem histórica, mas ela deixa de ser dependência operacional.
+A origem histórica continua registrada no `kit.json`, mas deixa de ser dependência operacional.
 
-O `kit.json` deve manter:
+Campos esperados em `origem`:
 
-```json
-{
-  "origem": {
-    "repositorio": "nutricionistaalmeidavh-spec/utilidades",
-    "caminho": "modules/artisys-...",
-    "commitSnapshot": "<sha-do-commit-importado>",
-    "importadoEm": "<data-ISO>"
-  }
-}
-```
+- `repositorio`: origem histórica;
+- `caminho`: diretório original;
+- `commitSnapshot`: SHA usado na importação;
+- `importadoEm`: data ISO da importação.
 
-Esse dado serve para auditoria e atualização futura, não para a montagem do ZIP.
+Esses campos servem para auditoria e atualização futura. O build não pode consultá-los para localizar código em outro repositório.
 
 ## 8. Empacotamento após a migração
 
-O fluxo atual que exige `UTILIDADES_PATH` deve ser removido.
-
-### Novo fluxo
+O fluxo que exige `UTILIDADES_PATH` deve ser removido.
 
 ```text
 kits/<slug>/
@@ -166,7 +146,7 @@ SHA-256
 dist/<slug>-v<versao>.zip
 ```
 
-O ZIP deve conter uma pasta raiz com o slug do kit e, dentro dela:
+O ZIP deve conter:
 
 ```text
 <slug>/
@@ -181,92 +161,64 @@ O ZIP deve conter uma pasta raiz com o slug do kit e, dentro dela:
 └── MANIFESTO-BUILD.json
 ```
 
-O `MANIFESTO-BUILD.json` deve registrar ao menos:
-
-- SKU;
-- ID técnico;
-- slug;
-- versão;
-- commit do `DevKitTools` quando disponível;
-- commit de origem do snapshot;
-- lista de arquivos incluídos;
-- SHA-256 do ZIP calculado externamente após a geração.
+O manifesto deve registrar SKU, ID técnico, slug, versão, commit do `DevKitTools` quando disponível, commit de origem do snapshot e lista dos arquivos incluídos. O SHA-256 do ZIP é calculado após a geração.
 
 ## 9. Mudanças nos scripts
 
-### 9.1 `scripts/montar-kit.mjs`
+### `scripts/montar-kit.mjs`
 
 Remover:
 
 - `--origem`;
 - `UTILIDADES_PATH`;
-- qualquer leitura obrigatória do repositório `utilidades`.
+- leitura obrigatória do `utilidades`.
 
-Passar a montar a partir de:
+Passar a montar exclusivamente de `kits/<slug>/produto/`.
 
-`kits/<slug>/produto/`
+### `scripts/lib/empacotamento.mjs`
 
-### 9.2 `scripts/lib/empacotamento.mjs`
+`montarKit()` deve receber somente dados e caminhos internos do `DevKitTools`.
 
-`montarKit()` deve receber apenas dados do kit e caminhos internos do `DevKitTools`.
+### `scripts/importar-do-utilidades.mjs`
 
-O conteúdo técnico deve ser lido do diretório `produto/` do kit.
+Sai do fluxo de build/release. Deve virar uma ferramenta explícita de manutenção, por exemplo `scripts/atualizar-snapshot.mjs`, usada somente quando o proprietário decidir importar uma nova revisão.
 
-### 9.3 `scripts/importar-do-utilidades.mjs`
+### `scripts/montar-todos.mjs`
 
-Deixa de ser parte do build/release.
-
-Deve ser substituído ou renomeado para uma ferramenta explícita de manutenção, por exemplo:
-
-`scripts/atualizar-snapshot.mjs`
-
-Essa ferramenta pode receber uma origem local durante desenvolvimento para atualizar um snapshot, mas nunca deve ser necessária para montar ou vender um kit.
-
-### 9.4 `scripts/montar-todos.mjs`
-
-Deve conseguir montar todos os kits elegíveis usando somente o checkout atual do `DevKitTools`.
+Deve montar todos os kits elegíveis usando somente o checkout atual do `DevKitTools`.
 
 ## 10. GitHub Actions
 
-### 10.1 `validar.yml`
+### `validar.yml`
 
 Deve validar:
 
 - schemas;
 - 63 kits registrados;
-- existência de `produto/` para cada kit que tenha build habilitado;
-- ausência de segredos;
+- presença de `produto/` para cada kit com build habilitado;
+- ausência de secrets;
 - consistência `kit.json` ↔ catálogo;
 - matriz determinística;
 - testes globais;
-- testes de cada módulo quando configurados.
+- testes individuais quando configurados.
 
-### 10.2 `montar-kits.yml`
+### `montar-kits.yml`
 
 Remover:
 
 - clone do `utilidades`;
 - `UTILIDADES_REPO_TOKEN`;
-- qualquer dependência externa privada para montar kits.
+- qualquer dependência privada externa para montar kits.
 
-O workflow deve:
+O workflow passa a fazer checkout, validar, montar itens comerciais elegíveis, gerar ZIPs/checksums e publicar artifacts de CI quando aplicável.
 
-1. fazer checkout do `DevKitTools`;
-2. instalar dependências da ferramenta de empacotamento;
-3. validar;
-4. montar somente itens comerciais elegíveis;
-5. gerar ZIPs e checksums;
-6. publicar artifacts de CI quando aplicável.
+### `release-kits.yml`
 
-### 10.3 `release-kits.yml`
-
-O release continua bloqueado enquanto o repositório estiver público, conforme a decisão comercial atual.
-
-Quando o repositório for privado, o release deve continuar funcionando sem token do `utilidades`.
+O release comercial continua bloqueado enquanto o repositório estiver público. Quando ele for privado, o release deve funcionar sem qualquer token do `utilidades`.
 
 ## 11. Estado comercial
 
-A existência de código em `produto/` não torna automaticamente o kit vendável.
+Código em `produto/` não torna o kit automaticamente vendável.
 
 Para `estadoComercial = "pronto"`, continuam obrigatórios:
 
@@ -279,82 +231,94 @@ Para `estadoComercial = "pronto"`, continuam obrigatórios:
 - ZIP gerado com sucesso;
 - checksum calculado.
 
-Itens em `preparando` podem existir no repositório e serem testados, mas não entram na montagem comercial padrão.
+Itens em `preparando` podem ser versionados e testados, mas não entram na montagem comercial padrão.
 
 ## 12. Licenciamento e terceiros
 
-A migração deve preservar todas as licenças necessárias.
+A migração deve preservar todas as licenças aplicáveis.
 
 Classificações práticas:
 
-- **código próprio**: pode usar a política comercial definida pela ArtiSys;
-- **dependência permissiva**: manter licença/atribuição exigida;
-- **copyleft/forte copyleft**: revisar as obrigações antes de marcar o kit como pronto;
-- **ferramenta externa não redistribuída**: documentar como requisito opcional quando aplicável.
+- **código próprio**: segue a política comercial escolhida pelo proprietário;
+- **dependência permissiva**: preservar licença/atribuição exigida;
+- **copyleft/forte copyleft**: revisar obrigações antes de marcar o kit como pronto;
+- **ferramenta externa não redistribuída**: documentar como requisito quando necessário.
 
-Nenhum kit deve ser marcado `pronto` enquanto `licencasConferidas` for falso.
+Nenhum kit pode ficar `pronto` enquanto `licencasConferidas` for falso. Copiar um arquivo para o `DevKitTools` não altera a licença original dele.
 
-A cópia de um arquivo para o `DevKitTools` não altera a licença original desse arquivo.
+### 12.1 Fronteira de licença do repositório
+
+O `DevKitTools` possui atualmente uma licença Apache 2.0 na raiz. Antes de importar código comercial para `kits/*/produto/`, a implementação deve eliminar a ambiguidade de escopo dessa licença.
+
+A regra será:
+
+- a licença raiz não pode ser interpretada automaticamente como relicenciamento de todos os snapshots comerciais;
+- cada kit deve declarar explicitamente a licença aplicável ao seu `produto/`;
+- licenças de terceiros já existentes devem ser preservadas sem alteração;
+- para código próprio que não deva ser Apache 2.0, a pasta do kit deve conter a licença/aviso comercial aplicável;
+- o README raiz e a documentação de licenciamento devem explicar que o repositório possui componentes sob licenças diferentes e que a licença de cada kit prevalece sobre a classificação do seu conteúdo;
+- nenhum código cuja titularidade/licença seja incerta pode ser marcado `pronto`.
+
+A implementação deve revisar a licença raiz antes do primeiro commit que introduza snapshots comerciais. O objetivo é evitar que a organização do repositório, por si só, conceda permissões diferentes das pretendidas para o código próprio ou para dependências de terceiros.
 
 ## 13. Repositório público durante desenvolvimento
 
 Por decisão do proprietário, o `DevKitTools` permanece público durante esta fase para aproveitar GitHub Actions.
 
-Consequência aceita no design:
+Consequências aceitas:
 
-- qualquer código commitado em `kits/*/produto/` fica publicamente visível enquanto o repositório for público;
-- privatizar o repositório depois não apaga automaticamente cópias/forks que terceiros tenham feito durante a fase pública;
-- por isso, não devem ser commitados segredos, dados de cliente ou qualquer material que dependa de confidencialidade durante essa fase.
+- qualquer código commitado em `kits/*/produto/` fica publicamente visível enquanto o repo for público;
+- privatizar depois não apaga automaticamente clones/forks/cópias feitas durante a fase pública;
+- não devem ser commitados segredos, dados de cliente ou qualquer material que dependa de confidencialidade.
 
-O gate de release comercial permanece bloqueado enquanto o repositório estiver público, mas esse gate não deve ser tratado como mecanismo de confidencialidade do código-fonte.
+O gate de release não é mecanismo de confidencialidade do código-fonte.
 
-## 14. Atualizações futuras de um kit
+## 14. Atualizações futuras
 
-Atualizar um kit deve ser uma operação explícita:
+Atualizar um kit será operação explícita:
 
 1. selecionar o kit;
-2. escolher a nova origem/versão de código;
-3. gerar novo snapshot em `produto/`;
-4. revisar diff;
+2. escolher a nova revisão de código;
+3. atualizar o snapshot em `produto/`;
+4. revisar o diff;
 5. executar testes;
-6. revisar licenças quando dependências mudarem;
-7. atualizar versão SemVer;
+6. revisar licenças se dependências mudarem;
+7. atualizar SemVer;
 8. gerar novo ZIP;
 9. registrar changelog.
 
-Não haverá sincronização automática silenciosa com `utilidades`.
+Não haverá sincronização silenciosa automática com `utilidades`.
 
 ## 15. Pacotes/bundles
 
-Os 8 pacotes comerciais continuam sendo compostos por ZIPs de kits individuais.
-
-Isso mantém o princípio:
+Os 8 pacotes comerciais continuam sendo compostos por ZIPs individuais:
 
 `kit independente → ZIP independente → pacote agrega ZIPs independentes`
 
-Nenhum pacote deve depender diretamente do `utilidades`.
+Nenhum pacote depende diretamente do `utilidades`.
 
 ## 16. Testes obrigatórios
 
-A implementação deve incluir testes que provem:
+A implementação deve provar que:
 
 1. `montarKit()` funciona sem `UTILIDADES_PATH`;
-2. um kit sem `produto/` falha com mensagem acionável;
-3. arquivos proibidos dentro de `produto/` bloqueiam o build;
+2. kit sem `produto/` falha com mensagem acionável;
+3. arquivos proibidos em `produto/` bloqueiam o build;
 4. `.env.example` continua permitido;
-5. o ZIP inclui `produto/` e documentação;
-6. o ZIP é determinístico;
-7. o checksum é estável para conteúdo idêntico;
-8. o manifesto contém proveniência do snapshot;
+5. ZIP inclui `produto/` e documentação;
+6. ZIP é determinístico;
+7. checksum é estável para conteúdo idêntico;
+8. manifesto contém a proveniência do snapshot;
 9. `montar-todos` não usa `utilidades`;
 10. workflows não referenciam `UTILIDADES_REPO_TOKEN`;
 11. somente itens `pronto` entram na montagem comercial padrão;
 12. os 63 kits têm snapshot quando `build.habilitado = true`;
-13. os 8 pacotes continuam referenciando apenas kits válidos.
+13. os 8 pacotes referenciam apenas kits válidos;
+14. a política de licença de cada `produto/` é explicitamente identificável.
 
-## 17. Migração sem perda de rastreabilidade
+## 17. Rastreabilidade da migração
 
-Antes de substituir o fluxo atual, registrar para cada kit:
+Para cada kit, registrar:
 
 - commit de origem;
 - lista de arquivos importados;
@@ -363,7 +327,7 @@ Antes de substituir o fluxo atual, registrar para cada kit:
 - licença detectada;
 - resultado dos testes de origem quando executáveis.
 
-A migração deve ser auditável e reproduzível, mas o produto final não deve depender de repetir a importação.
+A migração deve ser auditável, mas o produto final não pode depender de repetir a importação.
 
 ## 18. Critérios de aceitação
 
@@ -374,25 +338,25 @@ A arquitetura estará concluída quando:
 - [ ] nenhum script de build exigir `utilidades`;
 - [ ] `UTILIDADES_PATH` não for necessário para montagem;
 - [ ] `UTILIDADES_REPO_TOKEN` não for necessário para CI/build/release;
+- [ ] a fronteira de licenciamento do repositório estiver explícita;
+- [ ] cada kit possuir licença/aviso aplicável ao seu snapshot;
 - [ ] `npm test` estiver verde;
-- [ ] o catálogo estiver válido;
-- [ ] a varredura de segurança estiver verde;
-- [ ] a matriz for reproduzível;
+- [ ] catálogo, matriz e varredura de segurança estiverem verdes;
 - [ ] cada kit elegível gerar seu próprio ZIP;
-- [ ] os 8 pacotes gerarem ZIP agregador corretamente;
+- [ ] os 8 pacotes gerarem seus ZIPs agregadores;
 - [ ] o release permanecer bloqueado enquanto o repositório estiver público;
 - [ ] um checkout isolado do `DevKitTools`, sem acesso ao `utilidades`, conseguir montar os kits comerciais elegíveis.
 
-## 19. Fora de escopo desta migração
+## 19. Fora de escopo
 
 Não faz parte desta fase:
 
-- criação de marketplace/checkout;
-- automação de envio por e-mail ao comprador;
+- marketplace/checkout;
+- envio automático ao comprador;
 - definição final de preço dos 63 kits;
 - privatização do repositório;
-- alteração das funcionalidades internas dos módulos, salvo correções necessárias para torná-los autocontidos;
-- transformar dependências externas grandes em código vendorizado sem necessidade.
+- alteração funcional dos módulos, salvo correções necessárias para autocontenção;
+- vendorizar dependências externas grandes sem necessidade.
 
 ## 20. Resumo da decisão
 

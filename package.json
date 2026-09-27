@@ -1,0 +1,15 @@
+{
+  "name": "devkittools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "test": "node --test",
+    "validar": "node scripts/validar-catalogo.mjs",
+    "matriz": "node scripts/gerar-matriz.mjs",
+    "montar:kit": "node scripts/montar-kit.mjs",
+    "montar:todos": "node scripts/montar-todos.mjs",
+    "montar:pacotes": "node scripts/montar-pacotes.mjs"
+  }
+}

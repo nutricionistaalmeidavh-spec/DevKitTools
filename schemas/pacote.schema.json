@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Pacote DevKitTools",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["schemaVersion","slug","nome","versao","kits"],
+  "properties":{
+    "schemaVersion":{"type":"integer","enum":[1]},
+    "slug":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "nome":{"type":"string","pattern":"^.+$"},
+    "versao":{"type":"string","pattern":"^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?$"},
+    "kits":{"type":"array","items":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},"uniqueItems":true}
+  }
+}

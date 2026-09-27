@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import path from 'node:path';
-import {lerSemente, criarCatalogo, validarCatalogo, gerarMatrizMarkdown, criarPacotes, selecionarKitsParaMontagem} from '../scripts/lib/catalogo.mjs';
+import {lerSemente, criarCatalogo, validarCatalogo, gerarMatrizMarkdown, criarPacotes, selecionarKitsParaMontagem, selecionarPacotesParaMontagem} from '../scripts/lib/catalogo.mjs';
 
 const semente = await lerSemente(path.join(process.cwd(),'catalogo','semente-modulos.tsv'));
 
@@ -42,6 +42,15 @@ test('montagem comercial padrão inclui somente kits prontos', () => {
   const selecionados = selecionarKitsParaMontagem(catalogo);
   assert.deepEqual(selecionados.map(k=>k.idTecnico), [catalogo.kits[0].idTecnico]);
   assert.equal(selecionarKitsParaMontagem(catalogo,{incluirNaoProntos:true}).length, catalogo.kits.length);
+});
+
+test('montagem comercial padrão inclui somente pacotes prontos', () => {
+  const catalogo = criarCatalogo(semente);
+  const dados = criarPacotes(catalogo);
+  dados.pacotes[0] = {...dados.pacotes[0], estadoComercial:'pronto'};
+  dados.pacotes[1] = {...dados.pacotes[1], estadoComercial:'qa'};
+  assert.deepEqual(selecionarPacotesParaMontagem(dados).map(p=>p.slug), [dados.pacotes[0].slug]);
+  assert.equal(selecionarPacotesParaMontagem(dados,{incluirNaoProntos:true}).length, dados.pacotes.length);
 });
 
 test('matriz é determinística e contém colunas comerciais', () => {

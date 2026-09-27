@@ -3,9 +3,11 @@
   "title":"Catálogo DevKitTools",
   "type":"object",
   "additionalProperties":false,
-  "required":["schemaVersion","kits"],
+  "required":["schemaVersion","locale","modoDistribuicao","kits"],
   "properties":{
     "schemaVersion":{"type":"integer","enum":[1]},
-    "kits":{"type":"array","items":{"type":"object"}}
+    "locale":{"type":"string","enum":["pt-BR"]},
+    "modoDistribuicao":{"type":"string","enum":["publico-desenvolvimento","privado"]},
+    "kits":{"type":"array","items":{"$ref":"kit.schema.json"},"minItems":1}
   }
 }

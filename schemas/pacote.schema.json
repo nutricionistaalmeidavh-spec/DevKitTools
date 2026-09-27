@@ -3,12 +3,16 @@
   "title":"Pacote DevKitTools",
   "type":"object",
   "additionalProperties":false,
-  "required":["schemaVersion","slug","nome","versao","kits"],
+  "required":["schemaVersion","sku","slug","nome","versao","kits","estadoComercial","precoSugeridoBRL","zip"],
   "properties":{
     "schemaVersion":{"type":"integer","enum":[1]},
+    "sku":{"type":"string","pattern":"^PKT-[0-9]{3}$"},
     "slug":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},
-    "nome":{"type":"string","pattern":"^.+$"},
+    "nome":{"type":"string","minLength":1},
     "versao":{"type":"string","pattern":"^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?$"},
-    "kits":{"type":"array","items":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},"uniqueItems":true}
+    "kits":{"type":"array","items":{"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},"uniqueItems":true,"minItems":1},
+    "estadoComercial":{"type":"string","enum":["planejado","preparando","qa","pronto","pausado","descontinuado"]},
+    "precoSugeridoBRL":{"type":["number","null"],"minimum":0},
+    "zip":{"type":"string","pattern":"^[a-z0-9-]+-v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?\\.zip$"}
   }
 }

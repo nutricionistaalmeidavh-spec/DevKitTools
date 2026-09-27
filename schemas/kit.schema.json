@@ -3,18 +3,19 @@
   "title": "Kit DevKitTools",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion","sku","idTecnico","slug","nome","categoria","versao","estadoTecnico","estadoComercial","origem","runtime","dependenciaPagaObrigatoria","dependenciasOpcionais","upstreams","inclui","naoInclui","comandosValidacao","precoSugeridoBRL","documentacaoConferida","licencasConferidas","build"],
+  "required": ["schemaVersion","sku","idTecnico","slug","nome","descricao","categoria","versao","estadoTecnico","estadoComercial","origem","runtime","dependenciaPagaObrigatoria","dependenciasOpcionais","upstreams","inclui","naoInclui","comandosValidacao","precoSugeridoBRL","documentacaoConferida","licencasConferidas","build","zip"],
   "properties": {
     "schemaVersion": {"type":"integer","enum":[1]},
     "sku": {"type":"string","pattern":"^DKT-[A-Z0-9]+-[0-9]{3}$"},
     "idTecnico": {"type":"string","pattern":"^artisys-[a-z0-9-]+$"},
     "slug": {"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},
-    "nome": {"type":"string","pattern":"^.+$"},
-    "categoria": {"type":"string","pattern":"^.+$"},
+    "nome": {"type":"string","minLength":1},
+    "descricao": {"type":"string","minLength":1},
+    "categoria": {"type":"string","minLength":1},
     "versao": {"type":"string","pattern":"^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?$"},
     "estadoTecnico": {"type":"string","enum":["stable","implemented"]},
     "estadoComercial": {"type":"string","enum":["planejado","preparando","qa","pronto","pausado","descontinuado"]},
-    "origem": {"type":"object","additionalProperties":false,"required":["repositorio","caminho"],"properties":{"repositorio":{"type":"string"},"caminho":{"type":"string"},"commit":{"type":["string","null"]}}},
+    "origem": {"type":"object","additionalProperties":false,"required":["repositorio","caminho","commit"],"properties":{"repositorio":{"type":"string","minLength":1},"caminho":{"type":"string","minLength":1},"commit":{"type":["string","null"]}}},
     "runtime": {"type":"array","items":{"type":"string"},"uniqueItems":true},
     "dependenciaPagaObrigatoria": {"type":"boolean"},
     "dependenciasOpcionais": {"type":"array","items":{"type":"string"}},
@@ -25,6 +26,7 @@
     "precoSugeridoBRL": {"type":["number","null"],"minimum":0},
     "documentacaoConferida": {"type":"boolean"},
     "licencasConferidas": {"type":"boolean"},
-    "build": {"type":"object","additionalProperties":false,"required":["habilitado"],"properties":{"habilitado":{"type":"boolean"}}}
+    "build": {"type":"object","additionalProperties":false,"required":["habilitado"],"properties":{"habilitado":{"type":"boolean"}}},
+    "zip": {"type":"string","pattern":"^[a-z0-9-]+-v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?\\.zip$"}
   }
 }

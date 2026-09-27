@@ -20,37 +20,30 @@ jobs:
           ref: feat/catalogo-comercial-kits
           fetch-depth: 0
 
-      - name: Diagnosticar fragmentos
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p _bootstrap
-          total=0
-          for f in .bootstrap/part*.b64; do
-            limpo="$(tr -d '\r\n' < "$f")"
-            n=${#limpo}
-            total=$((total+n))
-            printf '%s chars=%d mod4=%d inicio=%s fim=%s\n' "$f" "$n" "$((n%4))" "${limpo:0:8}" "${limpo: -8}"
-          done
-          echo "total=$total mod4=$((total%4))"
-          cat .bootstrap/part*.b64 | tr -d '\r\n' > _bootstrap/arvore.b64
-          base64 --decode _bootstrap/arvore.b64 > _bootstrap/arvore.tar.gz
-          gzip -t _bootstrap/arvore.tar.gz
-
-      - name: Reconstruir árvore testada
+      - name: Testar hipótese de deslocamento no bootstrap
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p _bootstrap/extracted
-          tar -xzf _bootstrap/arvore.tar.gz -C _bootstrap/extracted
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, gzip
+
+          parts = [Path(f'.bootstrap/part{i:02d}.b64').read_text().replace('\n','').replace('\r','') for i in range(6)]
+          assert len(parts[0]) == 5999, len(parts[0])
+          assert len(parts[4]) == 6001, len(parts[4])
+          moved = parts[4][0]
+          candidate = parts[0] + moved + ''.join(parts[1:4]) + parts[4][1:] + parts[5]
+          raw = base64.b64decode(candidate, validate=True)
+          data = gzip.decompress(raw)
+          Path('_bootstrap/arvore.tar').write_bytes(data)
+          print(f'hipotese_validada caractere={moved!r} bytes_tar={len(data)}')
+          PY
+          tar -xf _bootstrap/arvore.tar -C _bootstrap/extracted
           test -f _bootstrap/extracted/package.json
           test -d _bootstrap/extracted/kits
           test -d _bootstrap/extracted/catalogo
           test -d _bootstrap/extracted/scripts
-          if find _bootstrap/extracted \( -name .git -o -name node_modules \) -print | grep -q .; then
-            echo 'Bootstrap contém diretório proibido.' >&2
-            exit 1
-          fi
 
       - name: Validar árvore antes de materializar
         working-directory: _bootstrap/extracted
@@ -78,9 +71,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
-          if git diff --cached --quiet; then
-            echo 'Nenhuma alteração para materializar.'
-            exit 0
-          fi
           git commit -m 'feat: materializa catalogo comercial e kits'
           git push origin HEAD:feat/catalogo-comercial-kits

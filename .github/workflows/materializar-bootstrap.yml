@@ -28,12 +28,11 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           import base64, gzip
-
           parts = [Path(f'.bootstrap/part{i:02d}.b64').read_text().replace('\n','').replace('\r','') for i in range(6)]
           assert len(parts[0]) == 5999, len(parts[0])
           assert len(parts[4]) == 6001, len(parts[4])
-          moved = parts[4][0]
-          candidate = parts[0] + moved + ''.join(parts[1:4]) + parts[4][1:] + parts[5]
+          moved = parts[4][-1]
+          candidate = parts[0] + moved + ''.join(parts[1:4]) + parts[4][:-1] + parts[5]
           raw = base64.b64decode(candidate, validate=True)
           data = gzip.decompress(raw)
           Path('_bootstrap/arvore.tar').write_bytes(data)

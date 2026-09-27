@@ -1,0 +1,31 @@
+name: Validar catálogo e kits
+
+on:
+  push:
+    branches: [main, feat/catalogo-comercial-kits]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Instalar dependências
+        run: npm ci
+      - name: Testes
+        run: npm test
+      - name: Validar catálogo
+        run: npm run validar
+      - name: Verificar segredos
+        run: npm run verificar:secrets
+      - name: Regenerar matriz
+        run: npm run matriz
+      - name: Confirmar matriz versionada
+        run: git diff --exit-code -- catalogo/MATRIZ-KITS.md

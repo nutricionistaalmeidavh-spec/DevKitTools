@@ -1,0 +1,80 @@
+name: Montar kits
+
+on:
+  workflow_dispatch:
+    inputs:
+      somente-estrutura:
+        description: 'Validar catálogo sem acessar/capturar código vendável do utilidades'
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: '22'
+
+jobs:
+  montar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout DevKitTools
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run validar
+      - run: npm run verificar:secrets
+
+      - name: Gate de distribuição comercial
+        if: ${{ !inputs['somente-estrutura'] }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event.repository.private }}" != "true" ]; then
+            echo 'Build comercial bloqueado: DevKitTools ainda está público.' >&2
+            exit 1
+          fi
+          if [ -z "${{ secrets.UTILIDADES_REPO_TOKEN }}" ]; then
+            echo 'Configure UTILIDADES_REPO_TOKEN com acesso somente leitura ao utilidades.' >&2
+            exit 1
+          fi
+
+      - name: Checkout privado do utilidades
+        if: ${{ !inputs['somente-estrutura'] }}
+        uses: actions/checkout@v4
+        with:
+          repository: nutricionistaalmeidavh-spec/utilidades
+          token: ${{ secrets.UTILIDADES_REPO_TOKEN }}
+          path: _origem/utilidades
+          fetch-depth: 1
+
+      - name: Montar ZIP de cada kit e pacotes
+        if: ${{ !inputs['somente-estrutura'] }}
+        shell: bash
+        run: |
+          npm run montar:todos -- --origem _origem/utilidades --dist dist
+          npm run montar:pacotes
+          npm run checksums
+
+      - name: Artifact estrutural de desenvolvimento
+        if: ${{ inputs['somente-estrutura'] }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalogo-devkittools
+          path: |
+            catalogo/
+            schemas/
+          if-no-files-found: error
+
+      - name: Artifact comercial
+        if: ${{ !inputs['somente-estrutura'] }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: kits-comerciais
+          path: dist/
+          if-no-files-found: error

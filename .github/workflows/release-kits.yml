@@ -1,0 +1,79 @@
+name: Release comercial de kits
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag comercial, por exemplo v1.0.0'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gate privado e tag explícita
+        shell: bash
+        env:
+          TAG: ${{ inputs.tag }}
+          MODO_DISTRIBUICAO: ${{ vars.MODO_DISTRIBUICAO }}
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event.repository.private }}" != "true" ]; then
+            echo 'Release bloqueado: o repositório precisa estar privado.' >&2
+            exit 1
+          fi
+          if [ "$MODO_DISTRIBUICAO" != 'privado' ]; then
+            echo 'Release bloqueado: configure MODO_DISTRIBUICAO=privado.' >&2
+            exit 1
+          fi
+          if ! [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo 'Tag inválida. Use vMAJOR.MINOR.PATCH; main/branch não é aceita.' >&2
+            exit 1
+          fi
+
+      - name: Checkout DevKitTools
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run validar
+      - run: npm run verificar:secrets
+
+      - name: Validar token da origem
+        shell: bash
+        run: |
+          if [ -z "${{ secrets.UTILIDADES_REPO_TOKEN }}" ]; then
+            echo 'Configure UTILIDADES_REPO_TOKEN com permissão mínima de leitura.' >&2
+            exit 1
+          fi
+
+      - name: Checkout utilidades fixado
+        uses: actions/checkout@v4
+        with:
+          repository: nutricionistaalmeidavh-spec/utilidades
+          token: ${{ secrets.UTILIDADES_REPO_TOKEN }}
+          path: _origem/utilidades
+          fetch-depth: 1
+
+      - name: Montar e verificar release
+        run: |
+          npm run montar:todos -- --origem _origem/utilidades --dist dist
+          npm run montar:pacotes
+          npm run checksums
+
+      - name: Publicar GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+        shell: bash
+        run: |
+          gh release create "$TAG" dist/*.zip dist/SHA256SUMS.txt --target "${{ github.sha }}" --title "DevKitTools $TAG" --notes "Release comercial validada e empacotada automaticamente."

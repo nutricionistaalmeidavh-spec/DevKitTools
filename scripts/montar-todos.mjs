@@ -1,0 +1,3 @@
+import path from 'node:path';import {carregarCatalogo} from './lib/catalogo.mjs';import {montarKit} from './lib/empacotamento.mjs';import {gerarChecksums} from './gerar-checksums.mjs';
+function arg(nome){const i=process.argv.indexOf(nome);return i>=0?process.argv[i+1]:null;} const origem=arg('--origem')||process.env.UTILIDADES_PATH;const dist=path.resolve(arg('--dist')||'dist');
+const catalogo=await carregarCatalogo();let n=0;for(const kit of catalogo.kits.filter(k=>k.build?.habilitado&&!['pausado','descontinuado'].includes(k.estadoComercial))){await montarKit({kit,origemUtilidades:origem,distDir:dist,kitDir:path.resolve('kits',kit.slug)});n++;}await gerarChecksums(dist);console.log(`Kits montados: ${n}`);

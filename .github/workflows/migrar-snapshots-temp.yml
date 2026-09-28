@@ -39,13 +39,20 @@ jobs:
       - name: Importar os snapshots dos kits habilitados
         run: npm run snapshot:atualizar -- --todos --origem _origem/utilidades
 
-      - name: Regenerar matriz e validar a migração
-        run: |
-          npm run matriz
-          npm test
-          npm run validar
-          npm run validar:snapshots
-          npm run verificar:secrets
+      - name: Regenerar matriz
+        run: npm run matriz
+
+      - name: Executar testes
+        run: npm test
+
+      - name: Validar catálogo
+        run: npm run validar
+
+      - name: Validar snapshots locais
+        run: npm run validar:snapshots
+
+      - name: Verificar ausência de secrets
+        run: npm run verificar:secrets
 
       - name: Registrar snapshots na branch
         shell: bash

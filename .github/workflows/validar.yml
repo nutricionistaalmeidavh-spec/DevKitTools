@@ -2,7 +2,7 @@ name: Validar catálogo e kits
 
 on:
   push:
-    branches: [main, feat/catalogo-comercial-kits]
+    branches: [main, feat/kits-autocontidos]
   pull_request:
 
 permissions:
@@ -23,6 +23,8 @@ jobs:
         run: npm test
       - name: Validar catálogo
         run: npm run validar
+      - name: Validar snapshots locais
+        run: npm run validar:snapshots
       - name: Verificar segredos
         run: npm run verificar:secrets
       - name: Regenerar matriz

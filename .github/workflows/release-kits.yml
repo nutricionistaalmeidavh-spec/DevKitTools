@@ -43,30 +43,20 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
-      - run: npm test
-      - run: npm run validar
-      - run: npm run verificar:secrets
-
-      - name: Validar token da origem
-        shell: bash
-        run: |
-          if [ -z "${{ secrets.UTILIDADES_REPO_TOKEN }}" ]; then
-            echo 'Configure UTILIDADES_REPO_TOKEN com permissão mínima de leitura.' >&2
-            exit 1
-          fi
-
-      - name: Checkout utilidades fixado
-        uses: actions/checkout@v4
-        with:
-          repository: nutricionistaalmeidavh-spec/utilidades
-          token: ${{ secrets.UTILIDADES_REPO_TOKEN }}
-          path: _origem/utilidades
-          fetch-depth: 1
+      - name: Instalar dependências
+        run: npm ci
+      - name: Testes
+        run: npm test
+      - name: Validar catálogo
+        run: npm run validar
+      - name: Validar snapshots locais
+        run: npm run validar:snapshots
+      - name: Verificar segredos
+        run: npm run verificar:secrets
 
       - name: Montar e verificar release
         run: |
-          npm run montar:todos -- --origem _origem/utilidades --dist dist
+          npm run montar:todos -- --dist dist
           npm run montar:pacotes
           npm run checksums
 

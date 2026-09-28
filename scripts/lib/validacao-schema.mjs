@@ -6,6 +6,12 @@ function tipoValido(tipo, valor) {
   return typeof valor === tipo;
 }
 
+function dateTimeValido(valor) {
+  if (typeof valor !== 'string') return false;
+  const padrao = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/;
+  return padrao.test(valor) && Number.isFinite(Date.parse(valor));
+}
+
 export function validarContraSchema(schema, valor, caminho = '$') {
   const erros = [];
   const tipos = Array.isArray(schema.type) ? schema.type : schema.type ? [schema.type] : [];
@@ -15,6 +21,9 @@ export function validarContraSchema(schema, valor, caminho = '$') {
   if (schema.enum && !schema.enum.includes(valor)) erros.push(`${caminho}: valor fora do enum`);
   if (typeof valor === 'string' && schema.pattern && !(new RegExp(schema.pattern).test(valor))) {
     erros.push(`${caminho}: formato inválido`);
+  }
+  if (typeof valor === 'string' && schema.format === 'date-time' && !dateTimeValido(valor)) {
+    erros.push(`${caminho}: date-time inválido`);
   }
   if (typeof valor === 'number' && schema.minimum !== undefined && valor < schema.minimum) {
     erros.push(`${caminho}: abaixo do mínimo`);

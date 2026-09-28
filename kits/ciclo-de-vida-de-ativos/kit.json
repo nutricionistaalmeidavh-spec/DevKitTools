@@ -12,7 +12,8 @@
   "origem": {
     "repositorio": "nutricionistaalmeidavh-spec/utilidades",
     "caminho": "modules/artisys-asset-lifecycle",
-    "commit": null
+    "commitSnapshot": "9bca8b29f3a5875433b42d01ceb84e743dabba82",
+    "importadoEm": "2026-09-28T22:46:20.930Z"
   },
   "runtime": [],
   "dependenciaPagaObrigatoria": false,

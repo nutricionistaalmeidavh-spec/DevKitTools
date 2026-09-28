@@ -20,22 +20,10 @@ jobs:
           ref: feat/kits-autocontidos
           fetch-depth: 0
 
-      - name: Confirmar credencial temporária da origem
-        shell: bash
-        env:
-          TOKEN_ORIGEM: ${{ secrets.UTILIDADES_REPO_TOKEN }}
-        run: |
-          set -euo pipefail
-          if [ -z "$TOKEN_ORIGEM" ]; then
-            echo 'Migração bloqueada: configure temporariamente UTILIDADES_REPO_TOKEN com acesso somente leitura ao utilidades.' >&2
-            exit 42
-          fi
-
-      - name: Checkout temporário do utilidades
+      - name: Checkout temporário do utilidades público
         uses: actions/checkout@v4
         with:
           repository: nutricionistaalmeidavh-spec/utilidades
-          token: ${{ secrets.UTILIDADES_REPO_TOKEN }}
           path: _origem/utilidades
           fetch-depth: 1
           persist-credentials: false

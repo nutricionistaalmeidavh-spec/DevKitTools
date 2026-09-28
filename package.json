@@ -5,7 +5,7 @@
   "type": "module",
   "engines": { "node": ">=22" },
   "scripts": {
-    "test": "node --test",
+    "test": "node --test test",
     "gerar:catalogo": "node scripts/gerar-catalogo.mjs",
     "preparar:kits": "node scripts/preparar-kits.mjs",
     "validar": "node scripts/validar-catalogo.mjs",

@@ -1,0 +1,35 @@
+LICENÇA COMERCIAL DE CÓDIGO-FONTE ARTISYS
+Mapas e Dados Geoespaciais Agro — SKU DKT-AGRO-002 — versão 0.1.0
+
+Copyright (c) 2026 ArtiSys. Direitos reservados sobre os componentes de sua titularidade.
+
+1. OBJETO E TITULARIDADE
+Esta licença regula somente o código-fonte original de titularidade da ArtiSys incluído neste kit ("Código ArtiSys"). Não abrange dados cartográficos, arquivos de mapas, bibliotecas, marcas ou obras de terceiros, que permanecem sujeitos às suas respectivas licenças e termos. O simples empacotamento não altera direitos preexistentes.
+
+2. PERMISSÕES AO COMPRADOR
+Mediante aquisição legítima do kit, a ArtiSys concede ao comprador uma licença não exclusiva, mundial, por prazo indeterminado para a versão adquirida, sem cobrança recorrente de licença pelo uso do Código ArtiSys, permitindo:
+(a) executar, estudar, copiar internamente e modificar o Código ArtiSys;
+(b) incorporá-lo em aplicações, sistemas, serviços e projetos próprios ou encomendados por clientes, inclusive comerciais;
+(c) distribuir ou disponibilizar os produtos resultantes aos seus usuários ou contratantes;
+(d) fornecer o Código ArtiSys como parte necessária de um projeto específico a seu contratante, desde que este receba e observe estas condições e não comercialize o módulo separadamente como kit, biblioteca ou ferramenta genérica concorrente.
+A licença não transfere a titularidade do Código ArtiSys.
+
+3. RESTRIÇÃO À REVENDA ISOLADA
+Esta licença comercial, por si só, não autoriza revender, publicar, oferecer como download, sublicenciar para revenda ou redistribuir o Código ArtiSys isoladamente, nem comercializá-lo como kit de código-fonte, template, biblioteca avulsa ou coleção de módulos concorrente ao kit fornecido pela ArtiSys. A utilização como parte funcional de um produto ou projeto integrado permanece permitida conforme a seção 2.
+
+4. CÓDIGO E MATERIAIS DE TERCEIROS
+Nenhuma restrição deste documento diminui permissões legais ou de licenças livres aplicáveis a componentes de terceiros ou a versões anteriormente disponibilizadas sob outras licenças. O comprador deve manter os avisos, atribuições e licenças desses componentes, quando presentes.
+
+5. MAPAS E DADOS EXTERNOS
+Este kit inclui o motor de integração e processamento, mas não inclui os pacotes cartográficos .pmtiles nem qualquer base OpenStreetMap. Se o comprador baixar ou utilizar dados derivados do OpenStreetMap, devem ser observadas a Open Database License (ODbL) 1.0 e as obrigações de atribuição e compartilhamento pertinentes aos dados. Uma atribuição usual é: © OpenStreetMap contributors — https://www.openstreetmap.org/copyright. Outros fornecedores de mapas e bibliotecas opcionais podem impor condições próprias. Consulte TERCEIROS-E-LICENCAS.md.
+
+6. VERSÕES ANTERIORES
+Este documento não revoga, não reduz nem altera direitos já concedidos validamente sobre cópias ou versões anteriores sob licenças como AGPL, MIT ou outras. Se houver trechos de titularidade de terceiros sujeitos a copyleft, tais obrigações prevalecem para esses trechos e trabalhos cobertos.
+
+7. AUSÊNCIA DE GARANTIA
+O Código ArtiSys é fornecido no estado em que se encontra, na extensão permitida pela legislação aplicável, sem promessa de adequação a uso específico, disponibilidade de infraestrutura de mapas, manutenção contínua ou serviços externos gratuitos. Garantias legais obrigatórias e condições comerciais expressamente contratadas permanecem preservadas.
+
+8. SUPORTE E ATUALIZAÇÕES
+A aquisição desta versão não implica, por si só, contratação de serviços, hospedagem, suporte contínuo ou direito automático a novas versões, salvo condições específicas da oferta.
+
+Para identificar obrigações relativas a terceiros, leia a documentação TERCEIROS-E-LICENCAS.md que acompanha o kit.

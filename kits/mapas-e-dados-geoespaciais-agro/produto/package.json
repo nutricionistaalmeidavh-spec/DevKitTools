@@ -8,5 +8,6 @@
     "./gis": "./src/gis.js",
     "./spatial": "./src/spatial.js",
     "./pmtiles": "./src/pmtiles.js"
-  }
+  },
+  "license": "SEE LICENSE IN LICENSE"
 }

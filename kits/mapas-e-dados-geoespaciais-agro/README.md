@@ -9,3 +9,5 @@ Valida, normaliza e prepara geometrias e mapas offline para produtos agrícolas 
 **ZIP esperado:** `mapas-e-dados-geoespaciais-agro-v0.1.0.zip`
 
 ID técnico: `artisys-agro-maps`.
+
+**Licenciamento:** os termos de uso do código ArtiSys estão em `produto/LICENSE`; fontes e licenças de dados cartográficos externos constam em `TERCEIROS-E-LICENCAS.md`. Mapas `.pmtiles` não fazem parte deste ZIP.

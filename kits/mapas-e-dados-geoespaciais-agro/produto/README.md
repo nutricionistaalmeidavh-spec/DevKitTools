@@ -55,3 +55,11 @@ Importadores KML/KMZ/GPX/Shapefile/ISOXML podem usar as mesmas bibliotecas open 
 ## Origem
 
 Generalizado a partir das implementações `src/agricultural-map.js`, `src/gis-import.js` e `src/map-package-planner.js` do SistemaLavoura em 2026-09-21. O código do SistemaLavoura permanece intacto.
+
+## Direitos de uso e dados de terceiros
+
+A cópia comercial deste módulo traz em `LICENSE` os termos de uso do **código-fonte ArtiSys**: é permitido incorporar e adaptar o núcleo em sistemas e projetos comerciais, inclusive para clientes, mas não revendê-lo isoladamente como kit/biblioteca concorrente sob esses termos.
+
+**Mapas não vêm no ZIP.** Se a aplicação utilizar mapas derivados de OpenStreetMap, exiba a atribuição **© OpenStreetMap contributors** e observe a licença de dados ODbL 1.0 e eventuais condições de bases derivadas. Veja `../TERCEIROS-E-LICENCAS.md` e os avisos de `mapasbrasilrelease`. Bibliotecas para importação de KML/KMZ/GPX/Shapefile/ISOXML são opcionais; suas licenças devem ser conferidas se forem incorporadas ao projeto.
+
+A licença desta cópia não altera direitos relativos a versões anteriores ou componentes de terceiros.

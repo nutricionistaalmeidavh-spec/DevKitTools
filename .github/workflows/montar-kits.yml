@@ -17,6 +17,8 @@ permissions:
 
 jobs:
   montar:
+    # Arquivado: a distribuição comercial dos DevKits foi encerrada.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout DevKitTools
